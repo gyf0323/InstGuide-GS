@@ -1,0 +1,7 @@
+ftfy
+regex
+loralib
+packaging
+tqdm
+torch
+torchvision

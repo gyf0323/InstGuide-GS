@@ -1,0 +1,30 @@
+# Base dependencies only. Install matching CUDA torch/torchvision, torch-scatter,
+# and both local extensions afterwards; see README.md. Teacher generation also
+# requires the separate CropFormer/Alpha-CLIP/Detectron2/PyTorch3D dependencies.
+name: instguide-gs
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip>=24
+  - cmake
+  - ninja
+  - numpy<2
+  - scipy
+  - scikit-learn
+  - pandas
+  - pillow
+  - opencv
+  - plyfile
+  - tqdm
+  - matplotlib
+  - networkx
+  - tensorboard
+  - pip:
+      - einops
+      - wandb
+      - lpips
+      - laspy
+      - timm
+      - jaxtyping

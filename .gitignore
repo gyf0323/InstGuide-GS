@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# Native builds
+build/
+dist/
+*.egg-info/
+*.so
+*.pyd
+*.dll
+*.o
+*.obj
+*.exp
+*.lib
+
+# Environments and IDEs
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Experiment outputs and logs
+out_*/
+output/
+outputs/
+wandb/
+runs/
+logs/
+*.log
+*.bak
+backup/
+point_cloud/
+.experiment-log/
+EXPERIMENT_LOG.md
+
+# Data and generated teachers
+/data/
+region_teachers*/
+geometry_binding/
+teacher_visualizations/
+decoded_for_visualization/
+
+# Checkpoints are downloaded separately
+/checkpoints/
+third_party/checkpoints/*
+!third_party/checkpoints/README.md
+*.ckpt
+*.pth
+
+# Local paper/development artifacts
+work/
+paper_tools/
+_tmp*
+.DS_Store
+Thumbs.db
+
+# Local assistants, release staging, and historical snapshots
+.agents/
+.codex/
+AGENTS.md
+.release/
+.release-archive/
+11/
+innovation2_core_code_for_gpt_*/
+innovation2_core_code_for_gpt_*.zip
+/docs/PUBLIC_RELEASE_AUDIT.md
+/docs/RELEASE_READINESS.md
+/论文创新点实现核对_26项审计_*.md
+
+# Optional retired teacher families (kept locally for historical experiments)
+/tools/generate_feature3dgs_region_teachers.py
+/tools/generate_sam_lseg_region_teachers.py
+/tools/generate_top100_eval_prompts.py
+/encoders/lseg_encoder/
+/encoders/sam_encoder/sam_onnx_example.onnx
+/third_party/sam2-main/
+
+# Alpha-CLIP runtime is retained, including its required .txt.gz tokenizer data
+/third_party/AlphaCLIP-main/demo/
+/third_party/AlphaCLIP-main/eval/
+/third_party/AlphaCLIP-main/train/
+/third_party/AlphaCLIP-main/img/
+
+# Machine-specific viewer experiments and generated native products
+SIBR_viewers_build_remote_semantic/
+/SIBR_viewers/
+*.exe
+*.pdb
+*.ilk
+*.pt
+*.onnx
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,13 @@
+{
+  "mask_visible_threshold": 0.4,
+  "undersegment_filter_threshold": 0.2,
+  "view_consensus_threshold": 1,
+  "contained_threshold": 0.9,
+  "point_filter_threshold": 0.7,
+  "dataset": "scannetpp_dslr",
+  "cropformer_path": "third_party/checkpoints/Mask2Former_hornet_3x_576d0b.pth",
+  "step": 2,
+  "scannetpp_dslr_root": "",
+  "scannetpp_dslr_depth_scale": 1000.0,
+  "scannetpp_dslr_mesh_name": "mesh_aligned_0.05.ply"
+}
