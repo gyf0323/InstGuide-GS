@@ -1,8 +1,8 @@
 {
-  "file_count": 725,
-  "source_bytes": 15359845,
-  "source_mib": 14.65,
-  "validation": "Git blob SHA-256 integrity; text checkout line endings may differ; not GPU validation or license clearance",
+  "file_count": 727,
+  "source_bytes": 16029037,
+  "source_mib": 15.29,
+  "validation": "file selection only; not GPU validation or license clearance",
   "format": "instguide-source-release-v1",
   "files": [
     {
@@ -16,9 +16,39 @@
       "sha256": "d5461c2c13d469c6c48a575993e80c683f7932b9359c1c1a15d250674116c7cf"
     },
     {
+      "path": "LICENSE.md",
+      "bytes": 4275,
+      "sha256": "cd5c95b3cfff3acc1bd412420c770f88809331c3db6872df11a970147aa8e81f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8704,
+      "sha256": "43a04e51f09f2c6f4bf00bb509b0e0c59d34f3b0f89260851b36e26277cfa3f1"
+    },
+    {
+      "path": "SEMANTIC_TWO_STAGE.md",
+      "bytes": 3607,
+      "sha256": "dffdca7cd3a61b951afc3d8fb19a119d56c88545fe2a8d9ecb210de03ce09c25"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2730,
+      "sha256": "730fba5ba2f37e431ed185fb541d75cf9965e0b9600135f2b510a7d6faec1219"
+    },
+    {
       "path": "arguments/__init__.py",
       "bytes": 15296,
       "sha256": "33d51bb23eba1bc6f9886a5232606ddf4499f90b9f962cf9f8773d40b3d10959"
+    },
+    {
+      "path": "assets/results/replica_room0.jpg",
+      "bytes": 309389,
+      "sha256": "0faf0025b2d13a98acc6b1c66023bc33390ea8e4508af6600eae3579839fe07f"
+    },
+    {
+      "path": "assets/results/scannetpp_scene2.jpg",
+      "bytes": 353294,
+      "sha256": "b36829703a5642bdb4e35b2d5d50a3afe8484f45e5b4df6b9edf59114575d90c"
     },
     {
       "path": "convert.py",
@@ -32,8 +62,8 @@
     },
     {
       "path": "environment.yml",
-      "bytes": 596,
-      "sha256": "b5ba5ff973308bec07d5afd537f137fe7e039b6428fbb724cb34499c57d881c2"
+      "bytes": 5380,
+      "sha256": "99f2816e4195390b7397a7754e0d9eb54de14b2ccd5aedf25b1c363f403b19fc"
     },
     {
       "path": "evaluation_release/2d/eval_unified_scaffoldgs_text_encoder.py",
@@ -52,8 +82,8 @@
     },
     {
       "path": "evaluation_release/2d/runtime/unified_semantic_eval/protocol.py",
-      "bytes": 27647,
-      "sha256": "92fa57cc212c72065549cc0931d8f012f851b6e72acccc6903f9eada1d8f7d41"
+      "bytes": 28169,
+      "sha256": "c87b3742dcbb44f8123529240db7e6bd60c911bd1e3ae8edc0a12fb927e23aa1"
     },
     {
       "path": "evaluation_release/2d/runtime/unified_semantic_eval/text_features.py",
@@ -76,6 +106,11 @@
       "sha256": "1653517e62b88ea11c7a3844dc96b6124a4aa27fec719fc015b4646cd1b9958e"
     },
     {
+      "path": "evaluation_release/README.md",
+      "bytes": 8950,
+      "sha256": "981c59602f7c66223557771d054873088ea8aeb653daba696769f811fc00e44b"
+    },
+    {
       "path": "evaluation_release/common/precompute_gtmesh_2d_labels.py",
       "bytes": 44581,
       "sha256": "29bd06a5c160814e2363df4f15cba842ccd85b7ec8d8a76d54027a065c838901"
@@ -84,11 +119,6 @@
       "path": "evaluation_release/common/prepare_fixed_vocabulary_gt.py",
       "bytes": 15840,
       "sha256": "f29533373fe597aebe275f32924383e0945fa1d1888837899566fbade0543aef"
-    },
-    {
-      "path": "evaluation_release/README.md",
-      "bytes": 8950,
-      "sha256": "331a4c8329500a601e1e673cead5250e38418a24adf36ccc6f7a4163a064f2b6"
     },
     {
       "path": "gaussian_renderer/__init__.py",
@@ -106,29 +136,19 @@
       "sha256": "4455a28417f1649e9705579d8ad571ff6675910036ac6c82b2bc9353c9a0a38e"
     },
     {
-      "path": "LICENSE.md",
-      "bytes": 4275,
-      "sha256": "cd5c95b3cfff3acc1bd412420c770f88809331c3db6872df11a970147aa8e81f"
-    },
-    {
       "path": "metrics.py",
       "bytes": 3991,
       "sha256": "f8ae2cda66d20678a5521155ae83f7b45b7250df93f8036c70eee410f99bfe35"
     },
     {
-      "path": "README.md",
-      "bytes": 10638,
-      "sha256": "9ffc40bbdd54710583381abc02609752277bbb59b980ed9fd98ec16f6ef554d7"
+      "path": "render.py",
+      "bytes": 5812,
+      "sha256": "eb79364549d90ccd797108063f332ef04dea3af5ebea9073eea1be87fd26be1e"
     },
     {
       "path": "render_semantic.py",
       "bytes": 25795,
       "sha256": "d0bab2df89500ea5bbbcb740ebb7c6e7a25a6a41bebeffef97f58fc798d0a66d"
-    },
-    {
-      "path": "render.py",
-      "bytes": 5812,
-      "sha256": "eb79364549d90ccd797108063f332ef04dea3af5ebea9073eea1be87fd26be1e"
     },
     {
       "path": "scene/__init__.py",
@@ -161,6 +181,11 @@
       "sha256": "e7a7ed3ddf6ee210525799bcba82b288b0e413b263dc1233425bc1d9e45f311f"
     },
     {
+      "path": "scripts/README.md",
+      "bytes": 1375,
+      "sha256": "45073b905eb68cf4ac03f7cb80cc15fa77dfd6ee6acd9e7ca67d65053e2723b8"
+    },
+    {
       "path": "scripts/evaluate_fixed_vocab_2d.sh",
       "bytes": 1594,
       "sha256": "49461a0f5134adf48cb924e0463e9aff23ad4e117ee20eaca727d9491d599225"
@@ -171,14 +196,14 @@
       "sha256": "5fd66b236c02025da86c9dda83e998f94494a4ef5b7dc27d643af158d04b02e9"
     },
     {
-      "path": "scripts/README.md",
-      "bytes": 1375,
-      "sha256": "45073b905eb68cf4ac03f7cb80cc15fa77dfd6ee6acd9e7ca67d65053e2723b8"
-    },
-    {
       "path": "scripts/train.sh",
       "bytes": 1092,
       "sha256": "483eae254811cb299338474219dc696fcaf4d16a6f8a8590867787fdaeeeb1d2"
+    },
+    {
+      "path": "semantic_3dgs_teacher/README.md",
+      "bytes": 5236,
+      "sha256": "9e88e17ce20fc17dc2d543c1eb7b61ad0fd5bf39672a1cc33825e2a25040b394"
     },
     {
       "path": "semantic_3dgs_teacher/__init__.py",
@@ -194,6 +219,11 @@
       "path": "semantic_3dgs_teacher/build_teacher.py",
       "bytes": 25250,
       "sha256": "baa6c835621cf43913b4bd0cd624694ceac020b53a1a92b80fee050e320be965"
+    },
+    {
+      "path": "semantic_3dgs_teacher/clustering/UPSTREAM_NOTICE.md",
+      "bytes": 507,
+      "sha256": "1dff36825bb601f3887431266ad6bd13f9531d55d55dfc5448de86a9332af435"
     },
     {
       "path": "semantic_3dgs_teacher/clustering/__init__.py",
@@ -236,11 +266,6 @@
       "sha256": "5f6ccb2863874ffa3f7f65b1895ebc20753efd33209bcaf757dd81c37fbaeda3"
     },
     {
-      "path": "semantic_3dgs_teacher/clustering/UPSTREAM_NOTICE.md",
-      "bytes": 507,
-      "sha256": "1dff36825bb601f3887431266ad6bd13f9531d55d55dfc5448de86a9332af435"
-    },
-    {
       "path": "semantic_3dgs_teacher/codec_utils.py",
       "bytes": 36270,
       "sha256": "632885be032c9e20d051187814cc7fdcb5dcfb7b9d16876e9b139e7f348ab46b"
@@ -256,14 +281,14 @@
       "sha256": "61a248716a1f31ef8d8f23ecaa2daa24c261bccff440dcf882cd77615f39cc95"
     },
     {
-      "path": "semantic_3dgs_teacher/configs/scannetpp_dslr_small.json",
-      "bytes": 427,
-      "sha256": "4b2ce7cf0e631ccb88761c255a6d045b63cf3ae89fd12b03cc52f4000c5d079c"
-    },
-    {
       "path": "semantic_3dgs_teacher/configs/scannetpp_dslr.json",
       "bytes": 421,
       "sha256": "fa750a12c38fd8a01a56a63cdf4f1dbbdbfbc877ff1a47f022a378d19f3f0cbf"
+    },
+    {
+      "path": "semantic_3dgs_teacher/configs/scannetpp_dslr_small.json",
+      "bytes": 427,
+      "sha256": "4b2ce7cf0e631ccb88761c255a6d045b63cf3ae89fd12b03cc52f4000c5d079c"
     },
     {
       "path": "semantic_3dgs_teacher/datasets/__init__.py",
@@ -282,13 +307,8 @@
     },
     {
       "path": "semantic_3dgs_teacher/pipeline.py",
-      "bytes": 22916,
-      "sha256": "70e1b5f6c151b2b511c8c8220af275c96ef56cb007672fc1434e3bd30dce2972"
-    },
-    {
-      "path": "semantic_3dgs_teacher/README.md",
-      "bytes": 4339,
-      "sha256": "efe99d5410559405cb895234aad35b01434a17d48f755fd7bd0b70a218bc83e1"
+      "bytes": 22924,
+      "sha256": "ae01011b4f73b3885ee6de74e1cb3736ee7e38316d543a618db21cf30557849a"
     },
     {
       "path": "semantic_3dgs_teacher/tiered_semantics.py",
@@ -311,11 +331,6 @@
       "sha256": "658402ed9dc58ccc7db3b1e2c02654210f5ec5e133dc3476fc131bce9bc068f8"
     },
     {
-      "path": "SEMANTIC_TWO_STAGE.md",
-      "bytes": 3634,
-      "sha256": "c339ad15346c1412dfbc50162542b2fa1d4dd32041c3788a3a62c47389521303"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/.gitignore",
       "bytes": 51,
       "sha256": "5cb50fd1077b728ac04ffed37e38f5778e8ee9e7893e616b61c1a6ad7751d600"
@@ -329,6 +344,16 @@
       "path": "submodules/diff-gaussian-rasterization/CMakeLists.txt",
       "bytes": 1046,
       "sha256": "8fc64ae6030af399b7b9559dea0c68e0aef619dca110e11248cf08ca9e9ad830"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/LICENSE.md",
+      "bytes": 4275,
+      "sha256": "cd5c95b3cfff3acc1bd412420c770f88809331c3db6872df11a970147aa8e81f"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/README.md",
+      "bytes": 871,
+      "sha256": "c82413c3a880e939f8620208ea919d468b1a89791f9a6cfe4dbbdf71326ba6a8"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h",
@@ -361,6 +386,11 @@
       "sha256": "364889512db45d9906d173627a060fffde63cf758d95823ec228ff90892c45e5"
     },
     {
+      "path": "submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer.h",
+      "bytes": 3660,
+      "sha256": "89352ae8637b981036c5f4932027990cc823a3082a271f4ee9548315a798d461"
+    },
+    {
       "path": "submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu",
       "bytes": 16717,
       "sha256": "c82842473e85d4ab899e848c50f7477d921270c02051abd619455b546b760029"
@@ -369,11 +399,6 @@
       "path": "submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.h",
       "bytes": 1596,
       "sha256": "58b97a9728e24d41602a2ac3e8eace025cfd3228de6e75033dc458d0303a46f4"
-    },
-    {
-      "path": "submodules/diff-gaussian-rasterization/cuda_rasterizer/rasterizer.h",
-      "bytes": 3660,
-      "sha256": "89352ae8637b981036c5f4932027990cc823a3082a271f4ee9548315a798d461"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/diff_gaussian_rasterization/__init__.py",
@@ -386,11 +411,6 @@
       "sha256": "d0a044032b7153a876abc52ffd01976d26f96ee172ad87c49b77e3006a3d149e"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/LICENSE.md",
-      "bytes": 4275,
-      "sha256": "cd5c95b3cfff3acc1bd412420c770f88809331c3db6872df11a970147aa8e81f"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/rasterize_points.cu",
       "bytes": 15196,
       "sha256": "6c4e42a704dca5940f09eebd1a68c9ed271a6b67eb48b6f0e2f9a4f48ecd7c23"
@@ -399,11 +419,6 @@
       "path": "submodules/diff-gaussian-rasterization/rasterize_points.h",
       "bytes": 3389,
       "sha256": "d9875c8bb5e804f56a2f487f81bc1aee741becafafdbf9f8f2a26863c687c341"
-    },
-    {
-      "path": "submodules/diff-gaussian-rasterization/README.md",
-      "bytes": 871,
-      "sha256": "c82413c3a880e939f8620208ea919d468b1a89791f9a6cfe4dbbdf71326ba6a8"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/setup.py",
@@ -416,14 +431,14 @@
       "sha256": "bd3bb9dbc46eaccd3013a8a179213314da7be8998b9fe1adabbb04c7d2f9fd0d"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/cmake/cmake_uninstall.cmake.in",
-      "bytes": 852,
-      "sha256": "db0bf5ec965ed312269f25057c56d7b5ca64e74da6c40e8153c01dbbffd3cefe"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/CMakeLists.txt",
       "bytes": 1855,
       "sha256": "bd6ec4f295f420dd08dd189b09a17f4a70c3e0e58fa19a2b79923eaa5081e956"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/cmake/cmake_uninstall.cmake.in",
+      "bytes": 852,
+      "sha256": "db0bf5ec965ed312269f25057c56d7b5ca64e74da6c40e8153c01dbbffd3cefe"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/copying.txt",
@@ -456,14 +471,14 @@
       "sha256": "9d7485ab7131fd9a0a8cc8031453a37271eeb79f2ce146f5db576786ec4dac6e"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/_swizzle_func.hpp",
-      "bytes": 34337,
-      "sha256": "db3c5a2d99d0a726de2a11d8b5e84db84b54538d78dd970b3cf579f01434bc52"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/_swizzle.hpp",
       "bytes": 48409,
       "sha256": "cb45420e33606d6a428a3bb403d0196b306b5450e1c47efc499e32cda7c3479c"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/_swizzle_func.hpp",
+      "bytes": 34337,
+      "sha256": "db3c5a2d99d0a726de2a11d8b5e84db84b54538d78dd970b3cf579f01434bc52"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/_vectorize.hpp",
@@ -481,19 +496,14 @@
       "sha256": "f4b44de6254936cd4f35756f93469934d60859f0062e821733bed79441f66abf"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_common_simd.inl",
-      "bytes": 6004,
-      "sha256": "2becb18e20aec82c938ad3ce7418be0feae5f6657534a6ab4306e3a279ae6152"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_common.inl",
       "bytes": 24725,
       "sha256": "188a78ac42d0355dd864111d36eb6cd0aea156c1843dbb06f8609869f577de8f"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_exponential_simd.inl",
-      "bytes": 813,
-      "sha256": "3452b1cc5709ff9d74bc606e48a3f735f6ada3d343eac88e017ce77f01ebb984"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_common_simd.inl",
+      "bytes": 6004,
+      "sha256": "2becb18e20aec82c938ad3ce7418be0feae5f6657534a6ab4306e3a279ae6152"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_exponential.inl",
@@ -501,9 +511,9 @@
       "sha256": "2e5d6796e3e1b7c3c0e550a26cfc5781494e7bf1bf1aa0f4f3b7f0e40a04420d"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_geometric_simd.inl",
-      "bytes": 4116,
-      "sha256": "c91ddff7ce512d307db40c0abe51cc60ad38b056fc153297b809bd0a1c7ef5fe"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_exponential_simd.inl",
+      "bytes": 813,
+      "sha256": "3452b1cc5709ff9d74bc606e48a3f735f6ada3d343eac88e017ce77f01ebb984"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_geometric.inl",
@@ -511,9 +521,9 @@
       "sha256": "459c9dfb53d667cd2b56ba6f75cd721fd319cd31a93eb0024255677b8a9b91cc"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_integer_simd.inl",
-      "bytes": 1634,
-      "sha256": "8d01e2a7cc25be4f2d00ac1a109a656133a5608614cf315252e6c8976bd27b0c"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_geometric_simd.inl",
+      "bytes": 4116,
+      "sha256": "c91ddff7ce512d307db40c0abe51cc60ad38b056fc153297b809bd0a1c7ef5fe"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_integer.inl",
@@ -521,9 +531,9 @@
       "sha256": "cd812f4c57908631d0c63b49dbe621d124fa9c152276e9d470f0be8e6e911459"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_matrix_simd.inl",
-      "bytes": 8511,
-      "sha256": "4fa9fe26917655b0883376ebbdf5ee40317665dd48bb5c261b644ee6b2ed32dc"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_integer_simd.inl",
+      "bytes": 1634,
+      "sha256": "8d01e2a7cc25be4f2d00ac1a109a656133a5608614cf315252e6c8976bd27b0c"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_matrix.inl",
@@ -531,9 +541,9 @@
       "sha256": "916072c59b2243d31bff8357ecb13fe6d1cf683ca405903313d01428bc313c43"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_packing_simd.inl",
-      "bytes": 72,
-      "sha256": "554eed2592a8c80fe0021a29ab546865edd250bb9e2620818670474ac0d9a1d2"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_matrix_simd.inl",
+      "bytes": 8511,
+      "sha256": "4fa9fe26917655b0883376ebbdf5ee40317665dd48bb5c261b644ee6b2ed32dc"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_packing.inl",
@@ -541,9 +551,9 @@
       "sha256": "60b1773a2531970a3112f774fb045122e7016cb51c9bc104a9a66160261910ec"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_trigonometric_simd.inl",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_packing_simd.inl",
+      "bytes": 72,
+      "sha256": "554eed2592a8c80fe0021a29ab546865edd250bb9e2620818670474ac0d9a1d2"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_trigonometric.inl",
@@ -551,14 +561,19 @@
       "sha256": "12452e0ba259301ece977d5339303437671e9c5939072d804d8ec5b3dc12e1cb"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_vector_relational_simd.inl",
-      "bytes": 72,
-      "sha256": "554eed2592a8c80fe0021a29ab546865edd250bb9e2620818670474ac0d9a1d2"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_trigonometric_simd.inl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_vector_relational.inl",
       "bytes": 2408,
       "sha256": "98481b9150953869dde39fb823f0a3eba606cfe6cd2ae1f6b3936e92c377a689"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/func_vector_relational_simd.inl",
+      "bytes": 72,
+      "sha256": "554eed2592a8c80fe0021a29ab546865edd250bb9e2620818670474ac0d9a1d2"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/glm.cpp",
@@ -671,11 +686,6 @@
       "sha256": "9b77ef1c6bf477967b905180e7a52fc7c183beb756d78ada59715c32c63288f3"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_mat4x4_simd.inl",
-      "bytes": 49,
-      "sha256": "48578deda435ea4f7157496dfee6b7bf4b7e0ab4eefa355473f10020f0fad422"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_mat4x4.hpp",
       "bytes": 6865,
       "sha256": "4548563a5da19892a6844cb0c27e8b73f7c3f0f0d001344cab6c862a0360ff86"
@@ -686,9 +696,9 @@
       "sha256": "c60a576aca7028431d49a4bf65430544bafef05f04856ee26c0ccc8ee54d500a"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_quat_simd.inl",
-      "bytes": 5972,
-      "sha256": "b34289096939a692c162b7f76cddd5b977900c0a00a58545b5010f906ba9b615"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_mat4x4_simd.inl",
+      "bytes": 49,
+      "sha256": "48578deda435ea4f7157496dfee6b7bf4b7e0ab4eefa355473f10020f0fad422"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_quat.hpp",
@@ -699,6 +709,11 @@
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_quat.inl",
       "bytes": 11667,
       "sha256": "3b5f13f5d96a59f2a2039a70b97f45948f64aed9f34f4dd94813d52e361743ae"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_quat_simd.inl",
+      "bytes": 5972,
+      "sha256": "b34289096939a692c162b7f76cddd5b977900c0a00a58545b5010f906ba9b615"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_vec1.hpp",
@@ -731,11 +746,6 @@
       "sha256": "ba908c56eee85be50e188d314f4526940016f61d44b4e34cf66d3d3843c32425"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_vec4_simd.inl",
-      "bytes": 20124,
-      "sha256": "1fac4716598953da4f25d64455d946322d7121fd160b1bad2263b17f6d900b7a"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_vec4.hpp",
       "bytes": 22960,
       "sha256": "7d2d34d8b57ecae76197d7e2e05a47223a15dd724b60810539783be72c6f2431"
@@ -744,6 +754,11 @@
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_vec4.inl",
       "bytes": 37243,
       "sha256": "13a7a3e84e6e333f94a374035cbad7622ce19789ee18ac64cfe0aad66d11820a"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/detail/type_vec4_simd.inl",
+      "bytes": 20124,
+      "sha256": "1fac4716598953da4f25d64455d946322d7121fd160b1bad2263b17f6d900b7a"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/exponential.hpp",
@@ -781,19 +796,14 @@
       "sha256": "c7cd3d2b20f52476ff49028c916a6984b8e58836fe6eeaf45f0d519c74d20ad1"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double2x2_precision.hpp",
-      "bytes": 2970,
-      "sha256": "870a26e88d5606eb59afd4dfeeaae03e4627fe3b2ac2412ef9909fde4a69c380"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double2x2.hpp",
       "bytes": 716,
       "sha256": "f162435d27c44b2123fb6aeabf6a1ad303038bc23ce2c4ce7c8d65059b4ff18d"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double2x3_precision.hpp",
-      "bytes": 1590,
-      "sha256": "5b0ebe9a915f87f396870eb4897253e60fa0bea6044435ce7a28ee3a1920d71c"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double2x2_precision.hpp",
+      "bytes": 2970,
+      "sha256": "870a26e88d5606eb59afd4dfeeaae03e4627fe3b2ac2412ef9909fde4a69c380"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double2x3.hpp",
@@ -801,9 +811,9 @@
       "sha256": "293555b0ed97a43a8943245ad856ae5dd7db047205cd518f3a6626475a3854f6"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double2x4_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double2x3_precision.hpp",
       "bytes": 1590,
-      "sha256": "1fd885f6484d863f6e43c8276ab2e3548e8789a584eb895a45dfb2479a032c02"
+      "sha256": "5b0ebe9a915f87f396870eb4897253e60fa0bea6044435ce7a28ee3a1920d71c"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double2x4.hpp",
@@ -811,9 +821,9 @@
       "sha256": "8a220b383965f0457b2e60cee0e01328a8e0ddce266e9e101f98e5471fff47bd"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double3x2_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double2x4_precision.hpp",
       "bytes": 1590,
-      "sha256": "b8bfeb2bc4ad1e9a27673de6c6bf2a547a8db2c8766ee02a7324170b678ae60f"
+      "sha256": "1fd885f6484d863f6e43c8276ab2e3548e8789a584eb895a45dfb2479a032c02"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double3x2.hpp",
@@ -821,9 +831,9 @@
       "sha256": "21189033fd6644d820eb597cc1afa6c7ee4cc60e8f6d90d5a0d50b7e56f47e81"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double3x3_precision.hpp",
-      "bytes": 2970,
-      "sha256": "bf7ea325238b15767ae810e556bfdfdeaf3898aa248b75f374b2284e8afa9ef4"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double3x2_precision.hpp",
+      "bytes": 1590,
+      "sha256": "b8bfeb2bc4ad1e9a27673de6c6bf2a547a8db2c8766ee02a7324170b678ae60f"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double3x3.hpp",
@@ -831,9 +841,9 @@
       "sha256": "ce0212b641e65eddba35e02df72b6343056309af06b0e26464a908d19eece282"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double3x4_precision.hpp",
-      "bytes": 1590,
-      "sha256": "271e3c054da08e16732398f7d9b24cd0af6ab40f862260404b42999d457c0b19"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double3x3_precision.hpp",
+      "bytes": 2970,
+      "sha256": "bf7ea325238b15767ae810e556bfdfdeaf3898aa248b75f374b2284e8afa9ef4"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double3x4.hpp",
@@ -841,9 +851,9 @@
       "sha256": "5751fac2e7d8955c1a67a558ae6cf53168c279a8dab43a915e14292b130b242c"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double4x2_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double3x4_precision.hpp",
       "bytes": 1590,
-      "sha256": "660f21b84ed78dd631c00d25442d807074bc7fbeb5e9001f925f1a3d9e4ad04f"
+      "sha256": "271e3c054da08e16732398f7d9b24cd0af6ab40f862260404b42999d457c0b19"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double4x2.hpp",
@@ -851,9 +861,9 @@
       "sha256": "b0c0155ff665e99994487a4750f703b2018e7bfb6010d3fbd756c5e5d25f4685"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double4x3_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double4x2_precision.hpp",
       "bytes": 1590,
-      "sha256": "131fe335a681ffb23348f043cee30e2427a9e1f45be9f1c71df1ecb5c7589f6b"
+      "sha256": "660f21b84ed78dd631c00d25442d807074bc7fbeb5e9001f925f1a3d9e4ad04f"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double4x3.hpp",
@@ -861,9 +871,9 @@
       "sha256": "6f5202c9dd2a3a97901220d018f728a9dafb56c9895f3b3cf99ced0304be3095"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double4x4_precision.hpp",
-      "bytes": 2970,
-      "sha256": "1e906578cda07f564ff7c5b5bf31b4749c686fb6e4052da2bbbd46c9dd6abe00"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double4x3_precision.hpp",
+      "bytes": 1590,
+      "sha256": "131fe335a681ffb23348f043cee30e2427a9e1f45be9f1c71df1ecb5c7589f6b"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double4x4.hpp",
@@ -871,9 +881,9 @@
       "sha256": "2cfc993535a19a8b52a5f6a6d71a0eb3ab646cbf9da0d3cf50f5f3248d3c2e35"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float2x2_precision.hpp",
-      "bytes": 2955,
-      "sha256": "955c6d5c0b661dafdcd0169a0e104784deb5dd7862a8fb132720dafb22f4a780"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_double4x4_precision.hpp",
+      "bytes": 2970,
+      "sha256": "1e906578cda07f564ff7c5b5bf31b4749c686fb6e4052da2bbbd46c9dd6abe00"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float2x2.hpp",
@@ -881,9 +891,9 @@
       "sha256": "ecf72a0f02fec9cf6747a4e5b3d62c9a6f07bbc35b4bbf949250a8100500c8ea"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float2x3_precision.hpp",
-      "bytes": 1582,
-      "sha256": "f8bd301e8a43b15e92c9935edb71c455b9ecd922c5f0a2e6d1b32783819cb28c"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float2x2_precision.hpp",
+      "bytes": 2955,
+      "sha256": "955c6d5c0b661dafdcd0169a0e104784deb5dd7862a8fb132720dafb22f4a780"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float2x3.hpp",
@@ -891,9 +901,9 @@
       "sha256": "d731b656ddded3ca7b9eb26b52849445a1d438457e4fad02d1fe94fa349b39a0"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float2x4_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float2x3_precision.hpp",
       "bytes": 1582,
-      "sha256": "15d8d7f61beeaacd077ef44296a5ed369a0c6aab5ec8481db9bd60f3290013dc"
+      "sha256": "f8bd301e8a43b15e92c9935edb71c455b9ecd922c5f0a2e6d1b32783819cb28c"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float2x4.hpp",
@@ -901,9 +911,9 @@
       "sha256": "f0be584885cc45b25708a181d859d69886d6919839f399f831ea727682c88a05"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float3x2_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float2x4_precision.hpp",
       "bytes": 1582,
-      "sha256": "ac403a7bf1ee8ad2799a4c8a9630d679156bd82f411696a4c9eba1de5f6dc8cb"
+      "sha256": "15d8d7f61beeaacd077ef44296a5ed369a0c6aab5ec8481db9bd60f3290013dc"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float3x2.hpp",
@@ -911,9 +921,9 @@
       "sha256": "990d9fbe4ab32cb35c67881a42bb88bdad38b9386f0a9e273bd7a5c4eb13dc7c"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float3x3_precision.hpp",
-      "bytes": 2955,
-      "sha256": "7dabb577886c2d26c752462118e55e67f03d7119a46877980991bc87b6bce4fa"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float3x2_precision.hpp",
+      "bytes": 1582,
+      "sha256": "ac403a7bf1ee8ad2799a4c8a9630d679156bd82f411696a4c9eba1de5f6dc8cb"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float3x3.hpp",
@@ -921,9 +931,9 @@
       "sha256": "13afb5c9a76cd00924bfd90338861bc7ba85097cc8a2c93a747862d9aef95737"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float3x4_precision.hpp",
-      "bytes": 1582,
-      "sha256": "096f630c612e71c525269940cfccea7f76dac9a5f282127a0bf89d3b08527830"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float3x3_precision.hpp",
+      "bytes": 2955,
+      "sha256": "7dabb577886c2d26c752462118e55e67f03d7119a46877980991bc87b6bce4fa"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float3x4.hpp",
@@ -931,9 +941,9 @@
       "sha256": "5a964ddc2ffed1f1a8f5f8d392f34aa4f870a0c985eda0c92c29ac6cd5679543"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float4x2_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float3x4_precision.hpp",
       "bytes": 1582,
-      "sha256": "dbf3daf91ede9b5987c57c4e4ea609eae089ad241b936aa4ffa604ca89e0346f"
+      "sha256": "096f630c612e71c525269940cfccea7f76dac9a5f282127a0bf89d3b08527830"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float4x2.hpp",
@@ -941,9 +951,9 @@
       "sha256": "c911e033c9268da984c9c2254cb92604060525d55220a333daf1688bf4575f6d"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float4x3_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float4x2_precision.hpp",
       "bytes": 1582,
-      "sha256": "e178488c0bd2d95c8d1e907e83e7b7f14bad2c9f6012c10514837b814fdeb9b8"
+      "sha256": "dbf3daf91ede9b5987c57c4e4ea609eae089ad241b936aa4ffa604ca89e0346f"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float4x3.hpp",
@@ -951,9 +961,9 @@
       "sha256": "c8d6bff74c2a51cff7573afcd9541f044d5da519694f4b344ec4bdebc1b6a213"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float4x4_precision.hpp",
-      "bytes": 2955,
-      "sha256": "e8688aa7c58fa5ad167a79075788b9685096202569e6d2186e0433c93647c5bf"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float4x3_precision.hpp",
+      "bytes": 1582,
+      "sha256": "e178488c0bd2d95c8d1e907e83e7b7f14bad2c9f6012c10514837b814fdeb9b8"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float4x4.hpp",
@@ -961,9 +971,9 @@
       "sha256": "66dbcdd06c50852fa77660429f618ef9d35131b8a8097821247a869014366c15"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int2x2_sized.hpp",
-      "bytes": 1685,
-      "sha256": "0fbcb22bacda84426f6edbc70635a3453eacf4fa940d5e88d04fdbdeaa121107"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_float4x4_precision.hpp",
+      "bytes": 2955,
+      "sha256": "e8688aa7c58fa5ad167a79075788b9685096202569e6d2186e0433c93647c5bf"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int2x2.hpp",
@@ -971,9 +981,9 @@
       "sha256": "8a3080afff7099b3dfc61d6c3a247087ced7f6993fa40b5ebbaa1208335dc4c0"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int2x3_sized.hpp",
-      "bytes": 1179,
-      "sha256": "9a8fb9c2b5b92ae2d02d0ec116b05f33083f87fc2a6f64eaaca6f0cda9bbdfe7"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int2x2_sized.hpp",
+      "bytes": 1685,
+      "sha256": "0fbcb22bacda84426f6edbc70635a3453eacf4fa940d5e88d04fdbdeaa121107"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int2x3.hpp",
@@ -981,9 +991,9 @@
       "sha256": "d045c6df93b236c00c24b8924086eec004feb6b8301b84de95c44ea5955165cc"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int2x4_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int2x3_sized.hpp",
       "bytes": 1179,
-      "sha256": "9ea529675b293464c471c9a28f928330de0d441b0c5eb86845e75548bd1c0688"
+      "sha256": "9a8fb9c2b5b92ae2d02d0ec116b05f33083f87fc2a6f64eaaca6f0cda9bbdfe7"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int2x4.hpp",
@@ -991,9 +1001,9 @@
       "sha256": "14f2dc172aa1d618ba7ecd4109e69a07e36399d1979daa622790f871dd93df52"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int3x2_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int2x4_sized.hpp",
       "bytes": 1179,
-      "sha256": "1b0488e9b88e63d93962a7468dd29fb830ddf312df802413063b5fc91399441f"
+      "sha256": "9ea529675b293464c471c9a28f928330de0d441b0c5eb86845e75548bd1c0688"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int3x2.hpp",
@@ -1001,9 +1011,9 @@
       "sha256": "6071040192b2fb125f271724a0f30d8caf7df7499cb07a4484ede4181e94d4ec"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int3x3_sized.hpp",
-      "bytes": 1685,
-      "sha256": "08cff59b27b2f72b42be58b7559a0cc86211bbf01309563375f6f4f6124e7edb"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int3x2_sized.hpp",
+      "bytes": 1179,
+      "sha256": "1b0488e9b88e63d93962a7468dd29fb830ddf312df802413063b5fc91399441f"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int3x3.hpp",
@@ -1011,9 +1021,9 @@
       "sha256": "76e66b174f3f0cafeffb1b7ab2221bcf923dcbe4c30ee56ab5addd04f46ac325"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int3x4_sized.hpp",
-      "bytes": 1179,
-      "sha256": "4c2219010ce9c08aebcc9f07bb4a039a75ff0b16ab24e06fecbf202e98f86df5"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int3x3_sized.hpp",
+      "bytes": 1685,
+      "sha256": "08cff59b27b2f72b42be58b7559a0cc86211bbf01309563375f6f4f6124e7edb"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int3x4.hpp",
@@ -1021,9 +1031,9 @@
       "sha256": "f3516290f38a476fe12aaf04b9f1ab19870ddc014b9e53ff366b120265064fe3"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int4x2_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int3x4_sized.hpp",
       "bytes": 1179,
-      "sha256": "e784ee517181561d8ed219738dec0146d39f19cd036ec4fae32987ebcc2627e2"
+      "sha256": "4c2219010ce9c08aebcc9f07bb4a039a75ff0b16ab24e06fecbf202e98f86df5"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int4x2.hpp",
@@ -1031,9 +1041,9 @@
       "sha256": "09ff0041bd3450a1e811a41bc7012b2afed4ce8906a58851c309ccbf3851cfe1"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int4x3_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int4x2_sized.hpp",
       "bytes": 1179,
-      "sha256": "c8fcc8409a6215ee496eb86d44c68fdfac84addd4d15582a3dd60029dc2af851"
+      "sha256": "e784ee517181561d8ed219738dec0146d39f19cd036ec4fae32987ebcc2627e2"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int4x3.hpp",
@@ -1041,14 +1051,19 @@
       "sha256": "30114b6258b94afb06d6a76326d1ce4abf66786adb226dcd1bba707ca009ad7f"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int4x4_sized.hpp",
-      "bytes": 1685,
-      "sha256": "3044c19c6cd59224beb8a2f9a880a80497afb605c0498716e8f063c93cd365ad"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int4x3_sized.hpp",
+      "bytes": 1179,
+      "sha256": "c8fcc8409a6215ee496eb86d44c68fdfac84addd4d15582a3dd60029dc2af851"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int4x4.hpp",
       "bytes": 801,
       "sha256": "562ce6dae48fd6dabd991d35011886716da18667244715d3be4f648725b84672"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_int4x4_sized.hpp",
+      "bytes": 1685,
+      "sha256": "3044c19c6cd59224beb8a2f9a880a80497afb605c0498716e8f063c93cd365ad"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_integer.hpp",
@@ -1091,19 +1106,14 @@
       "sha256": "8c1823c88297ccc3c1cc7a5aa044d1a3df89b9d6abcdadfe299e7dfa261dc46b"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint2x2_sized.hpp",
-      "bytes": 1725,
-      "sha256": "d8caee9b54803cc892aadb864f45fb1880d56e96f4130f3e3d222094cca0d088"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint2x2.hpp",
       "bytes": 816,
       "sha256": "4a80c8f3374eb5b304513f3f0991e6a610f5b483a122455268962298eab82a23"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint2x3_sized.hpp",
-      "bytes": 1203,
-      "sha256": "c1205db37d2a99378e1f5f3baffb3a44d3d041f4c3905c7f7783853c498778a9"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint2x2_sized.hpp",
+      "bytes": 1725,
+      "sha256": "d8caee9b54803cc892aadb864f45fb1880d56e96f4130f3e3d222094cca0d088"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint2x3.hpp",
@@ -1111,9 +1121,9 @@
       "sha256": "f2170ddfca51827b5d5a8605c835abbe53ae8c3577c4640fddd55492a1870ec2"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint2x4_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint2x3_sized.hpp",
       "bytes": 1203,
-      "sha256": "9d3409c3a2661583277bfeaabba536fc083cfab5f077a2cbbcc81604bdb44a1c"
+      "sha256": "c1205db37d2a99378e1f5f3baffb3a44d3d041f4c3905c7f7783853c498778a9"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint2x4.hpp",
@@ -1121,9 +1131,9 @@
       "sha256": "fb4255bfa2e92a8d29cbb6afc5b6f4665dbdcfa73d60f460d275f3463ab77c6b"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint3x2_sized.hpp",
-      "bytes": 1195,
-      "sha256": "4d8db1e553add29b4ba83efb17b0651a168971ac45fd41d5f3c60186a48e63b9"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint2x4_sized.hpp",
+      "bytes": 1203,
+      "sha256": "9d3409c3a2661583277bfeaabba536fc083cfab5f077a2cbbcc81604bdb44a1c"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint3x2.hpp",
@@ -1131,9 +1141,9 @@
       "sha256": "60f8fc35481bda8b080f39092a5e8c135b08d87fe0f4bf890f37a8c814753ae9"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint3x3_sized.hpp",
-      "bytes": 1725,
-      "sha256": "40fd3e2f9057607ab49f191c928360fca03ccdd878a73b41ec8cfa9a655fd327"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint3x2_sized.hpp",
+      "bytes": 1195,
+      "sha256": "4d8db1e553add29b4ba83efb17b0651a168971ac45fd41d5f3c60186a48e63b9"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint3x3.hpp",
@@ -1141,9 +1151,9 @@
       "sha256": "e9cf100c0732a9bc1cc3c6506ee2eb1151e5970d835bb5fef73d938d2f02094c"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint3x4_sized.hpp",
-      "bytes": 1203,
-      "sha256": "f834b99ab57d5cde531a40799ca940c66708bee8c07b8228648537d65dd6477b"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint3x3_sized.hpp",
+      "bytes": 1725,
+      "sha256": "40fd3e2f9057607ab49f191c928360fca03ccdd878a73b41ec8cfa9a655fd327"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint3x4.hpp",
@@ -1151,9 +1161,9 @@
       "sha256": "b686f76221d8a73dc3745a2d8e7eee24fb8695ddd65fb16cb9605bffb3c9f6f8"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint4x2_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint3x4_sized.hpp",
       "bytes": 1203,
-      "sha256": "698cb47c02d7084bbbb51fc7cf723ec06ae2cd4a8b1c6dbed1901f768710c480"
+      "sha256": "f834b99ab57d5cde531a40799ca940c66708bee8c07b8228648537d65dd6477b"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint4x2.hpp",
@@ -1161,9 +1171,9 @@
       "sha256": "52db98864969855922e0372ade11f521d4dc74d9ba16260cc4444b650e3778fb"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint4x3_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint4x2_sized.hpp",
       "bytes": 1203,
-      "sha256": "65466bd9a77b17d30ed89e9b76b3f6b9c94ead9e4c915f7a417df6c3851009e3"
+      "sha256": "698cb47c02d7084bbbb51fc7cf723ec06ae2cd4a8b1c6dbed1901f768710c480"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint4x3.hpp",
@@ -1171,9 +1181,9 @@
       "sha256": "a2148f7bf73e3e0d78f67449c7211d5f720555b1231f1d55d10a811cd4dfe2b4"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint4x4_sized.hpp",
-      "bytes": 1725,
-      "sha256": "5c30e830072780480c1e842a36604d3a8d0b315ba2320b21722fc45a80e33d0d"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint4x3_sized.hpp",
+      "bytes": 1203,
+      "sha256": "65466bd9a77b17d30ed89e9b76b3f6b9c94ead9e4c915f7a417df6c3851009e3"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint4x4.hpp",
@@ -1181,9 +1191,9 @@
       "sha256": "4776c7a5f1b79a54f396fa2ac74fc3e6be3d938ee328ac43714f7a9f53c54ed3"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_common_simd.inl",
-      "bytes": 372,
-      "sha256": "0523f9574c853339956779054b85daafb1ba2947b0e8f7ba702b240311982e03"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/matrix_uint4x4_sized.hpp",
+      "bytes": 1725,
+      "sha256": "5c30e830072780480c1e842a36604d3a8d0b315ba2320b21722fc45a80e33d0d"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_common.hpp",
@@ -1196,14 +1206,19 @@
       "sha256": "e0bbedd9ad969ceff4bbd66e439902a7e624eda5893b21c43668076840a30588"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_double_precision.hpp",
-      "bytes": 1318,
-      "sha256": "0e71b9f30dfbe962731b7fe48a639723d0bd0b9cd09f0ac138a75387c2ef28b2"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_common_simd.inl",
+      "bytes": 372,
+      "sha256": "0523f9574c853339956779054b85daafb1ba2947b0e8f7ba702b240311982e03"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_double.hpp",
       "bytes": 985,
       "sha256": "11607f4efb4a478df1c7701fa42a157ae47ffe3a5a6c9fc397fd7842fe68fdff"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_double_precision.hpp",
+      "bytes": 1318,
+      "sha256": "0e71b9f30dfbe962731b7fe48a639723d0bd0b9cd09f0ac138a75387c2ef28b2"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_exponential.hpp",
@@ -1216,14 +1231,14 @@
       "sha256": "abc01a807fb60cae9d7c73679730d420ed42f9f52d8a73a9dbb266b355d76684"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_float_precision.hpp",
-      "bytes": 1153,
-      "sha256": "eabb202f37e77ea6ee3dee1efe902dd45d1818ae2639bc1611d1e31784bcd209"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_float.hpp",
       "bytes": 976,
       "sha256": "c7d3c561dde9b3ae7f431c48580e60fe6e07518fd48c9c097153f74620880b81"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_float_precision.hpp",
+      "bytes": 1153,
+      "sha256": "eabb202f37e77ea6ee3dee1efe902dd45d1818ae2639bc1611d1e31784bcd209"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/quaternion_geometric.hpp",
@@ -1346,19 +1361,14 @@
       "sha256": "e2d1840f8d6c12f4921c1b9390b3d2799e9867aaa352f9ba61947a20c6d27c85"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool1_precision.hpp",
-      "bytes": 876,
-      "sha256": "1df14479afc2901b98e0be2086b6d588042646f17d5cd644dbfade37429b685a"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool1.hpp",
       "bytes": 649,
       "sha256": "50f4a314e5e58d4d9905d21c5e7f61a93fea6c904e3715c40363d7483f4dc881"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool2_precision.hpp",
-      "bytes": 1340,
-      "sha256": "a84467a8f9aeeb8de3b76df1aa5f8085503b5f4050bd5c808a60b2527736b72c"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool1_precision.hpp",
+      "bytes": 876,
+      "sha256": "1df14479afc2901b98e0be2086b6d588042646f17d5cd644dbfade37429b685a"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool2.hpp",
@@ -1366,9 +1376,9 @@
       "sha256": "14dfb7baa6114b10d428991e1f998ad9fa8a3157ae45a245ba13321cf6c87043"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool3_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool2_precision.hpp",
       "bytes": 1340,
-      "sha256": "764e4523aa8c416e0e3cf90f164332166eac1878a8784c232a8872fee5677f2b"
+      "sha256": "a84467a8f9aeeb8de3b76df1aa5f8085503b5f4050bd5c808a60b2527736b72c"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool3.hpp",
@@ -1376,14 +1386,19 @@
       "sha256": "8444556f70e1fa055558f8478ba741df295a734f142e287fc0786ffed9284a47"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool4_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool3_precision.hpp",
       "bytes": 1340,
-      "sha256": "2df19112b8540023df6130ab9b72f150e5e7081fafa02c77bdb7e9abe9ebd0ef"
+      "sha256": "764e4523aa8c416e0e3cf90f164332166eac1878a8784c232a8872fee5677f2b"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool4.hpp",
       "bytes": 392,
       "sha256": "b9106d7154ed6df900ed9ed5919bed0b625d08058f761df8e783e14686daef39"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_bool4_precision.hpp",
+      "bytes": 1340,
+      "sha256": "2df19112b8540023df6130ab9b72f150e5e7081fafa02c77bdb7e9abe9ebd0ef"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_common.hpp",
@@ -1396,19 +1411,14 @@
       "sha256": "8291b09930fb15ad964281650e73c908f8ca55bbda7082b12d14ad40339258dc"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double1_precision.hpp",
-      "bytes": 1155,
-      "sha256": "0a31897d68da3461dd898c680985d68d7caee4b87c6a3608d015e58d9fe68e28"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double1.hpp",
       "bytes": 782,
       "sha256": "c897f59c8185e3f235bdff984e49eb34d7b07199a7f735225525b946f634f66f"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double2_precision.hpp",
-      "bytes": 1400,
-      "sha256": "4fa7175b87630322d224aef6f050549120eb6119f78628d0bf002484bc2325bd"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double1_precision.hpp",
+      "bytes": 1155,
+      "sha256": "0a31897d68da3461dd898c680985d68d7caee4b87c6a3608d015e58d9fe68e28"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double2.hpp",
@@ -1416,9 +1426,9 @@
       "sha256": "da0b99d0c93f97bc072c2714fccd5e7215577482b28de408e3b7e3b30c4fc27f"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double3_precision.hpp",
-      "bytes": 1556,
-      "sha256": "936f965a1b879c915e970364b5baebc17bab7d649e879f6e0d96880e347f0621"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double2_precision.hpp",
+      "bytes": 1400,
+      "sha256": "4fa7175b87630322d224aef6f050549120eb6119f78628d0bf002484bc2325bd"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double3.hpp",
@@ -1426,9 +1436,9 @@
       "sha256": "899740010c39bbe4e22b51daad27f6b4fa00da9bc4a4b70866036bd888afa984"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double4_precision.hpp",
-      "bytes": 1587,
-      "sha256": "8102adb66c260325ad13df339843de450894bb45eafedaa05753c479b830a934"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double3_precision.hpp",
+      "bytes": 1556,
+      "sha256": "936f965a1b879c915e970364b5baebc17bab7d649e879f6e0d96880e347f0621"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double4.hpp",
@@ -1436,9 +1446,9 @@
       "sha256": "272762761a35813caaa8647db255606e5fa356595a052ea94ed87e612c458957"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float1_precision.hpp",
-      "bytes": 1150,
-      "sha256": "2ce1f1dc915c35bc6325bc52c87f2b2d25456b37841573036edfe797eca4d94c"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_double4_precision.hpp",
+      "bytes": 1587,
+      "sha256": "8102adb66c260325ad13df339843de450894bb45eafedaa05753c479b830a934"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float1.hpp",
@@ -1446,9 +1456,9 @@
       "sha256": "37f00240a6daec9a6bb66657412148018cceb04b9a16865e7f0e1bb6b5c4ed10"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float2_precision.hpp",
-      "bytes": 1394,
-      "sha256": "a98bcd3d22935a48c693496dd13bd6020e98072079b94c45bc608b7b6d7a106d"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float1_precision.hpp",
+      "bytes": 1150,
+      "sha256": "2ce1f1dc915c35bc6325bc52c87f2b2d25456b37841573036edfe797eca4d94c"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float2.hpp",
@@ -1456,9 +1466,9 @@
       "sha256": "e04a566abf197f138dc8fb3156833cd2ba7fc4a92405f840b096b317fcc46961"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float3_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float2_precision.hpp",
       "bytes": 1394,
-      "sha256": "217037d131b93e061aec1cff60642f856c84e99056acac5788425763728ff6cc"
+      "sha256": "a98bcd3d22935a48c693496dd13bd6020e98072079b94c45bc608b7b6d7a106d"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float3.hpp",
@@ -1466,9 +1476,9 @@
       "sha256": "03d186b2344d390c32a512a9b7736707b6399f0c3f77b80ab0d49a7d0b983751"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float4_precision.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float3_precision.hpp",
       "bytes": 1394,
-      "sha256": "9ab8578f82608014191f97a27413617faf029b9bf64311756de7a15fc47442ff"
+      "sha256": "217037d131b93e061aec1cff60642f856c84e99056acac5788425763728ff6cc"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float4.hpp",
@@ -1476,9 +1486,9 @@
       "sha256": "b09270e5e76688f9093c055d4f92cf82d612cbc2f3d3d69e2343bbfd3acb8b13"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int1_sized.hpp",
-      "bytes": 1212,
-      "sha256": "0299b93e72911547bc6898c3ec08945a8a17fc3f4554a3b6ad28297b54dcb65d"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_float4_precision.hpp",
+      "bytes": 1394,
+      "sha256": "9ab8578f82608014191f97a27413617faf029b9bf64311756de7a15fc47442ff"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int1.hpp",
@@ -1486,9 +1496,9 @@
       "sha256": "5665ac10cfd3b491367aa5baa201446648aad3311c89dededd79180522bd75a3"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int2_sized.hpp",
-      "bytes": 1235,
-      "sha256": "572513d752d915c3c55242af93a36530f5a6e33c3861092da588653044701872"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int1_sized.hpp",
+      "bytes": 1212,
+      "sha256": "0299b93e72911547bc6898c3ec08945a8a17fc3f4554a3b6ad28297b54dcb65d"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int2.hpp",
@@ -1496,9 +1506,9 @@
       "sha256": "3f19cc4e45dca03b9f3a88608c942b9cf9d167c80e2766b83d6ab134284ad25c"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int3_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int2_sized.hpp",
       "bytes": 1235,
-      "sha256": "00fb3c97857b3e722284a2e782ebdd103e034ba7f35867875fbf848a393bb49a"
+      "sha256": "572513d752d915c3c55242af93a36530f5a6e33c3861092da588653044701872"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int3.hpp",
@@ -1506,14 +1516,19 @@
       "sha256": "1296aa5290c52bf8331b54e24af32fbb7769d089f6f0146b6f3cdfee89a7aed6"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int4_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int3_sized.hpp",
       "bytes": 1235,
-      "sha256": "81bab05dc476f0d432ce425d4f7e56526eb1436b8a594e625b596973b65c7620"
+      "sha256": "00fb3c97857b3e722284a2e782ebdd103e034ba7f35867875fbf848a393bb49a"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int4.hpp",
       "bytes": 405,
       "sha256": "6115283d489e1d990ca4d88001f63c494ea4959cf216d44ef9e28dbf3d9b4620"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_int4_sized.hpp",
+      "bytes": 1235,
+      "sha256": "81bab05dc476f0d432ce425d4f7e56526eb1436b8a594e625b596973b65c7620"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_integer.hpp",
@@ -1556,19 +1571,14 @@
       "sha256": "deab66a22d8187a086f473208f51841ed156166407a8aae5b5c30135430b73af"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint1_sized.hpp",
-      "bytes": 1240,
-      "sha256": "dc76514f6b8b653675792bc893b458fb71481236b9156b92bc7a6a784b8e1fa5"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint1.hpp",
       "bytes": 711,
       "sha256": "936046e1e48adf16a2daa297a69e3318537c55f39572a05efbae9aca1479cf89"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint2_sized.hpp",
-      "bytes": 1259,
-      "sha256": "ba689ecb7f59648be907b99e4b55d4b81237806bf445d020cbf1ac13400e63f1"
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint1_sized.hpp",
+      "bytes": 1240,
+      "sha256": "dc76514f6b8b653675792bc893b458fb71481236b9156b92bc7a6a784b8e1fa5"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint2.hpp",
@@ -1576,9 +1586,9 @@
       "sha256": "3d03953933445d262f9e838144218343dcbd92f01ddcafcba368e68712affecf"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint3_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint2_sized.hpp",
       "bytes": 1259,
-      "sha256": "e8b2bb0ac1f67b8f37cc7c9bed17b1482322cd29926696477dfdb1f150a92a8c"
+      "sha256": "ba689ecb7f59648be907b99e4b55d4b81237806bf445d020cbf1ac13400e63f1"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint3.hpp",
@@ -1586,14 +1596,19 @@
       "sha256": "48c423931390622043e17545a0308776dc4a322ba0d2e36e8ff7927d5e0b66fe"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint4_sized.hpp",
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint3_sized.hpp",
       "bytes": 1259,
-      "sha256": "ce865c1ff455a477d3b3b153d99009ae2fe4ddc1a8d4af3b7a5f14f9fcc1ae3f"
+      "sha256": "e8b2bb0ac1f67b8f37cc7c9bed17b1482322cd29926696477dfdb1f150a92a8c"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint4.hpp",
       "bytes": 417,
       "sha256": "1afbf32485cf310fb8abd8f9610be2c7fef1fd71a5c4495cad4b942c74832b16"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_uint4_sized.hpp",
+      "bytes": 1259,
+      "sha256": "ce865c1ff455a477d3b3b153d99009ae2fe4ddc1a8d4af3b7a5f14f9fcc1ae3f"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/ext/vector_ulp.hpp",
@@ -1726,11 +1741,6 @@
       "sha256": "09f0d4d5803046d140dd19e5270a74306c6e7be097d04707e282f188f80a23a8"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtc/quaternion_simd.inl",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtc/quaternion.hpp",
       "bytes": 5465,
       "sha256": "9f289c70bc7d81c13d115f95c9c4a4d167c2ecad1b3819a57a61664350a2c2a5"
@@ -1739,6 +1749,11 @@
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtc/quaternion.inl",
       "bytes": 6219,
       "sha256": "ad950e939a20342e73d9414de87a4c6f53e8e6ee6a2bd6a75bb4f5695077c4e7"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtc/quaternion_simd.inl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtc/random.hpp",
@@ -1846,16 +1861,6 @@
       "sha256": "aa8467551ae61caa272e6e04361f85775bf1fccea3f89933228c75d3709d49d8"
     },
     {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtx/color_space_YCoCg.hpp",
-      "bytes": 1866,
-      "sha256": "409ce2fb8ead59fc1d9b95fb3ad37f3fd0e776585d4ef5cbbf3a2c9063b86f82"
-    },
-    {
-      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtx/color_space_YCoCg.inl",
-      "bytes": 2737,
-      "sha256": "fe7558f9fe00b62691d901675a474ec3714a84227b11accb8f4368f29d63981a"
-    },
-    {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtx/color_space.hpp",
       "bytes": 1973,
       "sha256": "7b4776cb40241b4abbcb8c8f3eeabc9c28f58696e3076b69cf25aa782a07589f"
@@ -1864,6 +1869,16 @@
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtx/color_space.inl",
       "bytes": 3177,
       "sha256": "1de118dfd6a7cdebd18fd5a2757b851052d10cbd14de5de2120f82cd295539bb"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtx/color_space_YCoCg.hpp",
+      "bytes": 1866,
+      "sha256": "409ce2fb8ead59fc1d9b95fb3ad37f3fd0e776585d4ef5cbbf3a2c9063b86f82"
+    },
+    {
+      "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtx/color_space_YCoCg.inl",
+      "bytes": 2737,
+      "sha256": "fe7558f9fe00b62691d901675a474ec3714a84227b11accb8f4368f29d63981a"
     },
     {
       "path": "submodules/diff-gaussian-rasterization/third_party/glm/glm/gtx/common.hpp",
@@ -2576,14 +2591,19 @@
       "sha256": "24d110c51536eea49b99b3ef9eb717e3587338358d41b2596d5b1d1c0b0a18b8"
     },
     {
-      "path": "submodules/simple-knn/ext.cpp",
-      "bytes": 427,
-      "sha256": "73fed2a598c6f51bda77a20f108b4495deed93785f19da5ac5f4330d32f0f1be"
-    },
-    {
       "path": "submodules/simple-knn/LICENSE.md",
       "bytes": 4275,
       "sha256": "cd5c95b3cfff3acc1bd412420c770f88809331c3db6872df11a970147aa8e81f"
+    },
+    {
+      "path": "submodules/simple-knn/UPSTREAM_NOTICE.md",
+      "bytes": 493,
+      "sha256": "b35c69193c060d3d454986f6971ac2570278d6f2023af89ce12c9b3a59982291"
+    },
+    {
+      "path": "submodules/simple-knn/ext.cpp",
+      "bytes": 427,
+      "sha256": "73fed2a598c6f51bda77a20f108b4495deed93785f19da5ac5f4330d32f0f1be"
     },
     {
       "path": "submodules/simple-knn/setup.py",
@@ -2616,11 +2636,6 @@
       "sha256": "8b77845eb74106e7a4130af8585b340a4a035425327b97559af250e1de6ae7ee"
     },
     {
-      "path": "submodules/simple-knn/UPSTREAM_NOTICE.md",
-      "bytes": 493,
-      "sha256": "b35c69193c060d3d454986f6971ac2570278d6f2023af89ce12c9b3a59982291"
-    },
-    {
       "path": "tests/test_evaluation_release.py",
       "bytes": 10650,
       "sha256": "13c7d90611df4ffdc4b3521e6e923bc3e30141aee6792dea7477effd4e3be9cd"
@@ -2647,13 +2662,13 @@
     },
     {
       "path": "tests/test_release_pipeline.py",
-      "bytes": 8865,
-      "sha256": "025bafdff5b6e33d7ec9905b0e31bfce182af80af4a863bb8a760a05dd38c24d"
+      "bytes": 10160,
+      "sha256": "5b1a2b5b061daa602bc5d0a6a3af5758311fbe22401f55ffd538b3890c7c55e6"
     },
     {
       "path": "tests/test_train_pipeline.py",
-      "bytes": 6794,
-      "sha256": "be7762933aac84abf7a51ea811b49df01e2b513dcfa203f59f3972864f3dc62f"
+      "bytes": 7758,
+      "sha256": "662610ebaba0b238208cd7867bfe2f6be3dad698d10c8e272ba8f6a6026bb330"
     },
     {
       "path": "tests/test_training_io.py",
@@ -2661,14 +2676,24 @@
       "sha256": "2ba7532e5ed72f0c7b543732947bd46fafbdd4d028e67c47a0b08c05e887163d"
     },
     {
-      "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 2730,
-      "sha256": "730fba5ba2f37e431ed185fb541d75cf9965e0b9600135f2b510a7d6faec1219"
-    },
-    {
       "path": "third_party/AlphaCLIP-main/.gitignore",
       "bytes": 124,
       "sha256": "58298c925b551a378296617b2be1e82bbd97c768dcbcc0994e6a2d9622223e94"
+    },
+    {
+      "path": "third_party/AlphaCLIP-main/LICENSE",
+      "bytes": 11360,
+      "sha256": "e8555cbbeaa17bff444ca58500cc94e8c49f4f7fbbaaf885bac819ebef198912"
+    },
+    {
+      "path": "third_party/AlphaCLIP-main/MANIFEST.in",
+      "bytes": 48,
+      "sha256": "263d7e5cd4193cd824b045f8be36cb6b18fad14bd4ac881e42ba8c9243575ad8"
+    },
+    {
+      "path": "third_party/AlphaCLIP-main/README.md",
+      "bytes": 8836,
+      "sha256": "21c46d0719a1ef3489bcdf7dcad230d78e4c4fa17fff6778dff384c970cfe7b5"
     },
     {
       "path": "third_party/AlphaCLIP-main/alpha_clip/__init__.py",
@@ -2716,16 +2741,6 @@
       "sha256": "1403418c85aee7e83068b10f350f2454f620a2fd51ed470cb24e5daacd817017"
     },
     {
-      "path": "third_party/AlphaCLIP-main/LICENSE",
-      "bytes": 11360,
-      "sha256": "e8555cbbeaa17bff444ca58500cc94e8c49f4f7fbbaaf885bac819ebef198912"
-    },
-    {
-      "path": "third_party/AlphaCLIP-main/MANIFEST.in",
-      "bytes": 48,
-      "sha256": "263d7e5cd4193cd824b045f8be36cb6b18fad14bd4ac881e42ba8c9243575ad8"
-    },
-    {
       "path": "third_party/AlphaCLIP-main/model-zoo.md",
       "bytes": 4260,
       "sha256": "8d4eb3e34f063ecc96f462e8fcd8b9ee16548fff1b88539965631709d7bcd1b9"
@@ -2741,6 +2756,16 @@
       "sha256": "f41e5d01ccbd2bc646c4602b3ae90d1e7c8a4f29fc40cabf67395d3684ad39c2"
     },
     {
+      "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/attn_image/Loafer.png",
+      "bytes": 586395,
+      "sha256": "1b6ac9d63f7c200903c060432d0e24febef65c077136b4d76a2467e018c3fa6a"
+    },
+    {
+      "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/attn_image/Windsor_tie.png",
+      "bytes": 586395,
+      "sha256": "593cb1b0d248dfcd99f4cdd3422a5ce7dd557d94c0753442e7440c403b76c124"
+    },
+    {
       "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/attn_image/crane.png",
       "bytes": 586395,
       "sha256": "4d8673b30efd86d0aeb8633da42ca7c12098feac75708c8a70cf52b82a4fde8e"
@@ -2749,11 +2774,6 @@
       "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/attn_image/image.png",
       "bytes": 138375,
       "sha256": "2a8034106ddb688b38b1ed7c13b7b31d2bbfddfe6edc47adb2e017f8112d56df"
-    },
-    {
-      "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/attn_image/Loafer.png",
-      "bytes": 586395,
-      "sha256": "1b6ac9d63f7c200903c060432d0e24febef65c077136b4d76a2467e018c3fa6a"
     },
     {
       "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/attn_image/mountain_bike.png",
@@ -2766,19 +2786,9 @@
       "sha256": "e53ef1ef10d33d96596e7f30b024a7d1233f06cb908329bcb4ae88f347b58c18"
     },
     {
-      "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/attn_image/Windsor_tie.png",
-      "bytes": 586395,
-      "sha256": "593cb1b0d248dfcd99f4cdd3422a5ce7dd557d94c0753442e7440c403b76c124"
-    },
-    {
       "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/diffusion_images/Boston_bull.png",
       "bytes": 601434,
       "sha256": "85fcd2244d1d91c7ccc71873acb993b3d957e5877d792e501b1bd3ce81d635de"
-    },
-    {
-      "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/diffusion_images/image.png",
-      "bytes": 201567,
-      "sha256": "0ed73bd351d2e24ce996fd0760a1270c20f20057202e827f9cfd5543c95ff52d"
     },
     {
       "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/diffusion_images/Rhodesian_ridgeback.png",
@@ -2786,14 +2796,14 @@
       "sha256": "afd2635035048613d20b4f86b6e190951ef7031461181324ca9dae6489e51600"
     },
     {
+      "path": "third_party/AlphaCLIP-main/notebooks/demo_imgs/diffusion_images/image.png",
+      "bytes": 201567,
+      "sha256": "0ed73bd351d2e24ce996fd0760a1270c20f20057202e827f9cfd5543c95ff52d"
+    },
+    {
       "path": "third_party/AlphaCLIP-main/pyproject.toml",
       "bytes": 527,
       "sha256": "638c70dc25da0ee66cd13594f71bb6a713aab5ed4128157d155478f0ad99b767"
-    },
-    {
-      "path": "third_party/AlphaCLIP-main/README.md",
-      "bytes": 8836,
-      "sha256": "21c46d0719a1ef3489bcdf7dcad230d78e4c4fa17fff6778dff384c970cfe7b5"
     },
     {
       "path": "third_party/AlphaCLIP-main/requirements.txt",
@@ -2811,11 +2821,6 @@
       "sha256": "509c5e4fbe0b981b5e7fc3430b3b898683c74d95474ee74a5b77f99f162f83d6"
     },
     {
-      "path": "third_party/checkpoints/README.md",
-      "bytes": 678,
-      "sha256": "c41fe16d4fd06a0604bffe5e3fa5b2be8459ef09320907e13c1c583ac9b90e9f"
-    },
-    {
       "path": "third_party/Entity/Entityv2/CropFormer/.gitignore",
       "bytes": 555,
       "sha256": "664ccab798e2f0ed98ba749b99a1830bd846220bf65943da24590ed362e34d24"
@@ -2829,6 +2834,31 @@
       "path": "third_party/Entity/Entityv2/CropFormer/CODE_OF_CONDUCT.md",
       "bytes": 244,
       "sha256": "1ce27940af665ed0b061c37de87b728100f1f548d9dccd4fd78158d2cf8f51f0"
+    },
+    {
+      "path": "third_party/Entity/Entityv2/CropFormer/CONTRIBUTING.md",
+      "bytes": 1622,
+      "sha256": "2e4380553f24892fa689682369c53bc4b69b3b8f96b626f5fe5d7eed29613d53"
+    },
+    {
+      "path": "third_party/Entity/Entityv2/CropFormer/GETTING_STARTED.md",
+      "bytes": 2681,
+      "sha256": "0c89973b29c51fa089333326cd7e373545144deb9f67a72e3b7d1e28952ed8aa"
+    },
+    {
+      "path": "third_party/Entity/Entityv2/CropFormer/INSTALL.md",
+      "bytes": 1697,
+      "sha256": "4465db1974bd1e3497382a6dc604912f9ce217f07b5d1c2fa50cc249c6d3348d"
+    },
+    {
+      "path": "third_party/Entity/Entityv2/CropFormer/LICENSE",
+      "bytes": 1054,
+      "sha256": "99566a874d9decd98dc3cea026c314ad255d8798d7d51e121fe1413f4d2750bb"
+    },
+    {
+      "path": "third_party/Entity/Entityv2/CropFormer/README.md",
+      "bytes": 3559,
+      "sha256": "e679ddc5c12d9a4984d2db7dc8a4cdfc779d30192cd69d46945a19d68087bdf3"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/cog.yaml",
@@ -2856,14 +2886,14 @@
       "sha256": "c4ca563b9acec5b3a258f9206a9fb45bc89765c304da2cbec94b38ebd25b668e"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/configs/entityv2/entity_segmentation/mask2former_hornet_3x_lr.yaml",
-      "bytes": 1672,
-      "sha256": "91b149a07b6f713451cfc43738067c32f8883a66258042f58cc51e2e29a302b0"
-    },
-    {
       "path": "third_party/Entity/Entityv2/CropFormer/configs/entityv2/entity_segmentation/mask2former_hornet_3x.yaml",
       "bytes": 1672,
       "sha256": "41bcec7f0679bab070c6f31b34024135c7258c2584fb3094d91bd4420c200df7"
+    },
+    {
+      "path": "third_party/Entity/Entityv2/CropFormer/configs/entityv2/entity_segmentation/mask2former_hornet_3x_lr.yaml",
+      "bytes": 1672,
+      "sha256": "91b149a07b6f713451cfc43738067c32f8883a66258042f58cc51e2e29a302b0"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/configs/entityv2/entity_segmentation/mask2former_swin_large_3x.yaml",
@@ -2886,11 +2916,6 @@
       "sha256": "884738245821dbfe0f3353966502c8de56a7d9c5c9da1f5138a4047efb216562"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/configs/entityv2/instance_segmentation/mask_rcnn_R_50.yaml",
-      "bytes": 372,
-      "sha256": "7c7dd5990d9a7f2acda262b6eb806a4528c2233663cffa5311be47532fc81dbd"
-    },
-    {
       "path": "third_party/Entity/Entityv2/CropFormer/configs/entityv2/instance_segmentation/mask2former_R_50.yaml",
       "bytes": 1387,
       "sha256": "e60a6df0bc6cdc138d693ff2f694058154307882a4f7cc005cb14ae1bfe836cf"
@@ -2904,6 +2929,11 @@
       "path": "third_party/Entity/Entityv2/CropFormer/configs/entityv2/instance_segmentation/mask2former_swin_tiny.yaml",
       "bytes": 1509,
       "sha256": "e6bbbb8ba769d1b122db336d98367697655ed0a1b77fb66d30f977ea33b3fbda"
+    },
+    {
+      "path": "third_party/Entity/Entityv2/CropFormer/configs/entityv2/instance_segmentation/mask_rcnn_R_50.yaml",
+      "bytes": 372,
+      "sha256": "7c7dd5990d9a7f2acda262b6eb806a4528c2233663cffa5311be47532fc81dbd"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/configs/entityv2/panoptic_segmentation/Base-Mask2Former.yaml",
@@ -2971,9 +3001,9 @@
       "sha256": "319a6c93da23bf276f733934d3ff4e8617bf37e99dc286b371246ae7ec4ae0cf"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/CONTRIBUTING.md",
-      "bytes": 1622,
-      "sha256": "2e4380553f24892fa689682369c53bc4b69b3b8f96b626f5fe5d7eed29613d53"
+      "path": "third_party/Entity/Entityv2/CropFormer/datasets/README.md",
+      "bytes": 5300,
+      "sha256": "fed2ec15838200bc4ce4276d1326ec7397e03679f7f112c87bc03b8ce096de28"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/datasets/ade20k_instance_catid_mapping.txt",
@@ -3006,9 +3036,9 @@
       "sha256": "63a9f06c7833676fe94a285a28b9dbbd5bb530726148eadb365c0a791c502564"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/datasets/README.md",
-      "bytes": 5300,
-      "sha256": "fed2ec15838200bc4ce4276d1326ec7397e03679f7f112c87bc03b8ce096de28"
+      "path": "third_party/Entity/Entityv2/CropFormer/demo_cropformer/README.md",
+      "bytes": 2349,
+      "sha256": "7a64c79353f8d0ae863bdd78ec1cbd5d122c13d54ba52676601d1705e99d5f52"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/demo_cropformer/demo_from_dirs.py",
@@ -3026,9 +3056,9 @@
       "sha256": "cdc964ef375fd1d1d33eea8d03dc40d198443543fcc7c53192836fe7de271f69"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/demo_cropformer/README.md",
-      "bytes": 2349,
-      "sha256": "7a64c79353f8d0ae863bdd78ec1cbd5d122c13d54ba52676601d1705e99d5f52"
+      "path": "third_party/Entity/Entityv2/CropFormer/demo_mask2former/README.md",
+      "bytes": 164,
+      "sha256": "ea605ada33f6e35ddba5e2b6e50e3d0fbdfe21c1fa4f22e12510d09ca4a044dd"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/demo_mask2former/demo.py",
@@ -3039,31 +3069,6 @@
       "path": "third_party/Entity/Entityv2/CropFormer/demo_mask2former/predictor.py",
       "bytes": 7934,
       "sha256": "442764ada31744fe9b372dff68d1daf802c815c4312f961fa02e779eba3f22d4"
-    },
-    {
-      "path": "third_party/Entity/Entityv2/CropFormer/demo_mask2former/README.md",
-      "bytes": 164,
-      "sha256": "ea605ada33f6e35ddba5e2b6e50e3d0fbdfe21c1fa4f22e12510d09ca4a044dd"
-    },
-    {
-      "path": "third_party/Entity/Entityv2/CropFormer/entity_api/common/gason.cpp",
-      "bytes": 9540,
-      "sha256": "87b51aeb1080825adce3599664559241ffe932d451812090a2f8f0314bfb7ec0"
-    },
-    {
-      "path": "third_party/Entity/Entityv2/CropFormer/entity_api/common/gason.h",
-      "bytes": 3483,
-      "sha256": "27c94844d04a4b3735878eb5ec2f81ff6eaa54618e3ae7c3e1556a88bed8e3c9"
-    },
-    {
-      "path": "third_party/Entity/Entityv2/CropFormer/entity_api/common/maskApi.c",
-      "bytes": 8308,
-      "sha256": "c629b3a9116b75f79bf04174c0d9b826ffe73bb885bf44c83139a1cb9e7defe4"
-    },
-    {
-      "path": "third_party/Entity/Entityv2/CropFormer/entity_api/common/maskApi.h",
-      "bytes": 2176,
-      "sha256": "c9876e28a962d9022b14bf2936377ce6ea604d6665bb8497621e61fc3fa1d017"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/entity_api/PythonAPI/Makefile",
@@ -3106,19 +3111,24 @@
       "sha256": "b322af5fa311fbd1af23bf9ba58d52b29510a56c48441f48f2bb68fb0322ea1c"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/GETTING_STARTED.md",
-      "bytes": 2681,
-      "sha256": "0c89973b29c51fa089333326cd7e373545144deb9f67a72e3b7d1e28952ed8aa"
+      "path": "third_party/Entity/Entityv2/CropFormer/entity_api/common/gason.cpp",
+      "bytes": 9540,
+      "sha256": "87b51aeb1080825adce3599664559241ffe932d451812090a2f8f0314bfb7ec0"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/INSTALL.md",
-      "bytes": 1697,
-      "sha256": "4465db1974bd1e3497382a6dc604912f9ce217f07b5d1c2fa50cc249c6d3348d"
+      "path": "third_party/Entity/Entityv2/CropFormer/entity_api/common/gason.h",
+      "bytes": 3483,
+      "sha256": "27c94844d04a4b3735878eb5ec2f81ff6eaa54618e3ae7c3e1556a88bed8e3c9"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/LICENSE",
-      "bytes": 1054,
-      "sha256": "99566a874d9decd98dc3cea026c314ad255d8798d7d51e121fe1413f4d2750bb"
+      "path": "third_party/Entity/Entityv2/CropFormer/entity_api/common/maskApi.c",
+      "bytes": 8308,
+      "sha256": "c629b3a9116b75f79bf04174c0d9b826ffe73bb885bf44c83139a1cb9e7defe4"
+    },
+    {
+      "path": "third_party/Entity/Entityv2/CropFormer/entity_api/common/maskApi.h",
+      "bytes": 2176,
+      "sha256": "c9876e28a962d9022b14bf2936377ce6ea604d6665bb8497621e61fc3fa1d017"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/mask2former/__init__.py",
@@ -3231,14 +3241,14 @@
       "sha256": "273f3c22217b7d23cddff073511f7a461f8d17e6e0344fbb1689467c79c712ed"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/mask2former/data/datasets/register_mapillary_vistas_panoptic.py",
-      "bytes": 16370,
-      "sha256": "ed310a118a57b1124a829db9298ba04a07036b237f2a49c64c8e7727fdc7fd79"
-    },
-    {
       "path": "third_party/Entity/Entityv2/CropFormer/mask2former/data/datasets/register_mapillary_vistas.py",
       "bytes": 13018,
       "sha256": "1cbb3c0b5402dec07bde5b0dc76df478aaa28d07c0bf7b26d65f7eaf33e7882e"
+    },
+    {
+      "path": "third_party/Entity/Entityv2/CropFormer/mask2former/data/datasets/register_mapillary_vistas_panoptic.py",
+      "bytes": 16370,
+      "sha256": "ed310a118a57b1124a829db9298ba04a07036b237f2a49c64c8e7727fdc7fd79"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/mask2former/evaluation/__init__.py",
@@ -3281,24 +3291,24 @@
       "sha256": "635c15c182571864acb9e60a5d1ce711d7f65089db036fcb90bad914b805bf61"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/mask2former/modeling/criterion_view.py",
-      "bytes": 11797,
-      "sha256": "a3d55ccb8a50e7fe9c571fd532ab4ee94346856d146300e8b30c34184c0c9d80"
-    },
-    {
       "path": "third_party/Entity/Entityv2/CropFormer/mask2former/modeling/criterion.py",
       "bytes": 10559,
       "sha256": "b80c583c1dcfc63f9fbdaea3d0509a7908d161fc348aefdbf6746ffff53a88da"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/mask2former/modeling/matcher_view.py",
-      "bytes": 8270,
-      "sha256": "f13b477a5c048bf7785b2d2ae3145adfe5a84b1279a8a3be4232369e569ff7d7"
+      "path": "third_party/Entity/Entityv2/CropFormer/mask2former/modeling/criterion_view.py",
+      "bytes": 11797,
+      "sha256": "a3d55ccb8a50e7fe9c571fd532ab4ee94346856d146300e8b30c34184c0c9d80"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/mask2former/modeling/matcher.py",
       "bytes": 7469,
       "sha256": "0eba899f42b02c9344dc428252e30033aad876f876f612bc3dec30b7781c0915"
+    },
+    {
+      "path": "third_party/Entity/Entityv2/CropFormer/mask2former/modeling/matcher_view.py",
+      "bytes": 8270,
+      "sha256": "f13b477a5c048bf7785b2d2ae3145adfe5a84b1279a8a3be4232369e569ff7d7"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/mask2former/modeling/meta_arch/__init__.py",
@@ -3451,24 +3461,19 @@
       "sha256": "658211cd8aa132263a9abdf32b755c839b6bfdde4a0eb24c0a95b19cb628e1a4"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/README.md",
-      "bytes": 3559,
-      "sha256": "e679ddc5c12d9a4984d2db7dc8a4cdfc779d30192cd69d46945a19d68087bdf3"
-    },
-    {
       "path": "third_party/Entity/Entityv2/CropFormer/requirements.txt",
       "bytes": 53,
       "sha256": "0299a9b2dbbfb7962bdcab0402948c378820dcb7f066219b1debdde48d068487"
     },
     {
+      "path": "third_party/Entity/Entityv2/CropFormer/tools/README.md",
+      "bytes": 2774,
+      "sha256": "595b0eae735611a04c86ab6e088d2a5476406de86be974fbc0e7f6475ae8147e"
+    },
+    {
       "path": "third_party/Entity/Entityv2/CropFormer/tools/analyze_model.py",
       "bytes": 5719,
       "sha256": "4cbff1a47b74db52b1ce8374d3775c6323a570ca1f9448d18c7ceb78e2621a15"
-    },
-    {
-      "path": "third_party/Entity/Entityv2/CropFormer/tools/convert_pretrain_cocoentity.py",
-      "bytes": 696,
-      "sha256": "84e9b9b5fbb5b7b979e8f88e767b98bb6227c6cdca7923d7cee923840ff1f60e"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/tools/convert-pretrained-swin-model-to-d2.py",
@@ -3481,6 +3486,11 @@
       "sha256": "310d02bff605561bf1de3fedb16f610b67d0d84eea34ecc3933d8782f920ab6a"
     },
     {
+      "path": "third_party/Entity/Entityv2/CropFormer/tools/convert_pretrain_cocoentity.py",
+      "bytes": 696,
+      "sha256": "84e9b9b5fbb5b7b979e8f88e767b98bb6227c6cdca7923d7cee923840ff1f60e"
+    },
+    {
       "path": "third_party/Entity/Entityv2/CropFormer/tools/evaluate_coco_boundary_ap.py",
       "bytes": 1513,
       "sha256": "619c261801454f1d66bc75ec37c290e2322fbbd24d6c44232fb1f7d6e9bb08b8"
@@ -3491,9 +3501,9 @@
       "sha256": "0db54f57e7fabd4ff6074a82d119d4481b0f913a460b311b4b7bce32675ec327"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/tools/README.md",
-      "bytes": 2774,
-      "sha256": "595b0eae735611a04c86ab6e088d2a5476406de86be974fbc0e7f6475ae8147e"
+      "path": "third_party/Entity/Entityv2/CropFormer/train_net.py",
+      "bytes": 13128,
+      "sha256": "8cb8ec6e6476e9ea3dddc4f8334295bd67bc7cf7798b6a3c089e23d6de0a657a"
     },
     {
       "path": "third_party/Entity/Entityv2/CropFormer/train_net_entity.py",
@@ -3501,9 +3511,9 @@
       "sha256": "ac26a640c6a85e5e7f5003e3a4ef6dc43ecff88a6b601eb8e70c263daef6b5d6"
     },
     {
-      "path": "third_party/Entity/Entityv2/CropFormer/train_net.py",
-      "bytes": 13128,
-      "sha256": "8cb8ec6e6476e9ea3dddc4f8334295bd67bc7cf7798b6a3c089e23d6de0a657a"
+      "path": "third_party/checkpoints/README.md",
+      "bytes": 678,
+      "sha256": "c41fe16d4fd06a0604bffe5e3fa5b2be8459ef09320907e13c1c583ac9b90e9f"
     },
     {
       "path": "tools/__init__.py",

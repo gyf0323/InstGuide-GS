@@ -1,30 +1,95 @@
-# Base dependencies only. Install matching CUDA torch/torchvision, torch-scatter,
-# and both local extensions afterwards; see README.md. Teacher generation also
-# requires the separate CropFormer/Alpha-CLIP/Detectron2/PyTorch3D dependencies.
+# Linux server environments (two stages, one reference file).
+# This YAML creates the 3DGS environment ONLY. The teacher environment is
+# intentionally separate because CropFormer uses an older PyTorch/CUDA stack.
+# System prerequisites: NVIDIA driver, git, build-essential, and a CUDA toolkit
+# with nvcc matching the PyTorch CUDA build. A wheel's CUDA runtime is not nvcc.
+# Official torch/torchvision pairs: https://pytorch.org/get-started/previous-versions/
+#
+# 1. Geometry / semantic 3DGS training and evaluation
+# Server reference: Ubuntu 22.04, Python 3.11, PyTorch 2.10.0, CUDA 12.8.
+# From the repository root, on a GPU server with the CUDA 12.8 toolkit:
+#   conda env create -f environment.yml
+#   conda activate instguide-gs
+#   export CUDA_HOME=/usr/local/cuda-12.8  # use your actual toolkit directory
+#   export PATH="$CUDA_HOME/bin:$PATH"
+#   export OMP_NUM_THREADS=8 MAX_JOBS=4
+#   python -m pip install torch-scatter==2.1.2 --no-build-isolation
+#   python -m pip install --no-build-isolation -e submodules/diff-gaussian-rasterization
+#   python -m pip install --no-build-isolation -e submodules/simple-knn
+#   python -m pip install --no-deps -e third_party/AlphaCLIP-main
+# torch-scatter and native extensions are built AFTER torch is installed.
+# Set TORCH_CUDA_ARCH_LIST only for your GPU (e.g. 12.0 for Blackwell, 8.9 for
+# Ada); never copy .so/.pyd files from another Python/PyTorch/CUDA environment.
+#
+# 2. Offline teacher generation
+# Recorded server stack: Python 3.8.20, torch 2.0.0+cu118, torchvision 0.15.1+cu118,
+# CUDA toolkit 11.8, Detectron2 0.6, PyTorch3D 0.7.9, RTX 4090 D.
+# Run these commands from the repository root, NOT in instguide-gs:
+#   conda create -n instguide-teacher python=3.8.20 pip=24.3.1 setuptools=69.5.1 wheel ninja -y
+#   conda activate instguide-teacher
+#   export CUDA_HOME=/usr/local/cuda-11.8  # use your actual toolkit directory
+#   export PATH="$CUDA_HOME/bin:$PATH"
+#   export OMP_NUM_THREADS=4 MAX_JOBS=4
+#   python -m pip install torch==2.0.0 torchvision==0.15.1 --index-url https://download.pytorch.org/whl/cu118
+#   python -m pip install numpy==1.24.4 scipy==1.10.1 pillow==10.4.0 opencv-python==4.13.0.92 open3d==0.19.0 timm==0.6.13
+#   python -m pip install scikit-learn==1.3.2 pandas==2.0.3 matplotlib==3.7.5 networkx==3.1 plyfile==1.0.3 tqdm==4.65.2
+#   python -m pip install "cython<3" shapely==2.0.7 h5py submitit scikit-image==0.21.0 pycocotools==2.0.7
+#   python -m pip install fvcore==0.1.5.post20221221 iopath==0.1.9 yacs==0.1.8 ftfy==6.2.3 regex==2024.11.6 loralib==0.1.2 packaging==24.2
+#   git clone --branch v0.6 --depth 1 https://github.com/facebookresearch/detectron2.git third_party/detectron2
+#   python -m pip install --no-build-isolation -e third_party/detectron2
+#   git clone --branch v0.7.9 --depth 1 https://github.com/facebookresearch/pytorch3d.git third_party/pytorch3d
+#   python -m pip install --no-build-isolation -e third_party/pytorch3d
+#   python -m pip install --no-deps -e third_party/AlphaCLIP-main
+#   (cd third_party/Entity/Entityv2/CropFormer/mask2former/modeling/pixel_decoder/ops && python setup.py build_ext --inplace && python -m pip install --no-build-isolation .)
+# The versioned source installs above are reconstruction references, not a
+# bitwise environment lock: the server audit did not capture Detectron2 or
+# PyTorch3D Git revisions. PyTorch3D v0.7.9's upstream tested matrix starts at
+# torch 2.1; the recorded server used a working local 0.7.9 build with torch 2.0.
+# Verify ball_query and CropFormer inference on the installed build before a
+# full teacher run. Do not silently upgrade torch/timm/Pillow to resolve a build.
+# PyTorch3D source requirements: https://github.com/facebookresearch/pytorch3d/blob/v0.7.9/INSTALL.md
+# Detectron2 source requirements: https://github.com/facebookresearch/detectron2/blob/main/INSTALL.md
+# Keep the mask checkpoint, preprocessing and environment fixed when comparing
+# teacher instances; a 3D instance count is not a semantic-category count.
+# Download the weights separately; see third_party/checkpoints/README.md.
+#
+# Minimal checks after each environment's native builds:
+# 3DGS: python -c "import torch, torchvision, torch_scatter; import diff_gaussian_rasterization._C; from simple_knn._C import distCUDA2; assert torch.cuda.is_available(); print(torch.__version__, torch.version.cuda)"
+# Teacher: python -c "import torch, torchvision, detectron2._C, pytorch3d._C, MultiScaleDeformableAttention, timm, cv2; from pytorch3d.ops import ball_query; assert torch.cuda.is_available(); print(torch.__version__, torch.version.cuda, timm.__version__, cv2.__version__)"
+# Import checks do not replace a GPU forward/backward smoke test. These are
+# server setup references; this file is not a new clean-server validation run.
 name: instguide-gs
 channels:
   - conda-forge
   - defaults
 dependencies:
   - python=3.11
-  - pip>=24
+  - pip>=24,<26
+  - setuptools<81
+  - wheel
   - cmake
   - ninja
-  - numpy<2
+  - numpy=1.26.4
   - scipy
   - scikit-learn
   - pandas
-  - pillow
-  - opencv
+  - pillow=10.4.0
   - plyfile
   - tqdm
   - matplotlib
   - networkx
   - tensorboard
   - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.10.0+cu128
+      - torchvision==0.25.0+cu128
+      - opencv-python==4.10.0.84
       - einops
       - wandb
       - lpips
       - laspy
-      - timm
+      - ftfy
+      - regex
+      - loralib==0.1.2
+      - packaging
       - jaxtyping

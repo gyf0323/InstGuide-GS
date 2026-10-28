@@ -1,7 +1,9 @@
 # InstGuide-GS
 
-InstGuide-GS is a two-stage open-vocabulary semantic Gaussian splatting system for
-static indoor scenes. It extends Scaffold-GS with:
+**Instance-Guided Semantic Learning for Open-Vocabulary 3D Gaussian Splatting**
+
+InstGuide-GS reconstructs category-level open-vocabulary semantics in static
+indoor scenes. It extends Scaffold-GS with:
 
 1. a geometry-indexed, instance-level semantic teacher that aggregates
    multi-view CropFormer masks with Alpha-CLIP features and stores one prototype
@@ -10,83 +12,43 @@ static indoor scenes. It extends Scaffold-GS with:
    latent and only transition or geometrically uncertain Anchors allocate
    low-rank child-Gaussian residuals.
 
-## Repository layout
+## Results
 
-```text
-arguments/                         command-line parameters
-scene/                             Scaffold-GS model and semantic carrier
-utils/instance_teacher_adapter.py  instance teacher runtime adapter
-utils/instance_geometry_semantic.py geometry binding and Anchor state assignment
-semantic_3dgs_teacher/             complete teacher-generation package
-tools/                             training orchestration and artifact utilities
-scripts/                           one training and two evaluation launchers
-tests/                             CPU unit tests for teacher and geometry logic
-third_party/AlphaCLIP-main/        Alpha-CLIP source
-third_party/Entity/.../CropFormer/ CropFormer source
-submodules/                        CUDA rasterizer and nearest-neighbor extensions
-```
+**ScanNet++ Scene 2.** Cross-view semantic segmentation from the manuscript.
 
-## Environment
+![ScanNet++ Scene 2 semantic segmentation comparison](assets/results/scannetpp_scene2.jpg)
 
-The last validated server stack used Python 3.11, a CUDA-enabled PyTorch build,
-and locally compiled CUDA extensions. Create the base environment first:
+**Replica room0.** Cross-view semantic segmentation from the manuscript.
+
+![Replica room0 semantic segmentation comparison](assets/results/replica_room0.jpg)
+
+These previews of the manuscript figures retain their GT, method labels and
+class legends.
+
+## Installation
+
+Use two Linux server environments: teacher generation uses Python 3.8 / PyTorch
+2.0.0 / CUDA 11.8; 3DGS training and evaluation use the Python 3.11 / PyTorch 2.10.0 /
+CUDA 12.8 server reference. Both environments, native builds and checks are in
+**[environment.yml](environment.yml)**. Do not merge their dependencies.
+
+For the 3DGS stage, start with:
 
 ```bash
 conda env create -f environment.yml
 conda activate instguide-gs
+# Complete the native-extension installation commands in environment.yml.
 ```
 
-This is a base environment, not a complete GPU installation. Dependencies such
-as LPIPS/timm may install a default PyTorch build; verify or replace it with a
-matching CUDA-enabled **torch and torchvision** pair for the host. Install
-**torch-scatter** against that same PyTorch/CUDA combination (a matching binary
-wheel, or a source build with the local CUDA toolkit). Then build both extensions
-in the active environment:
+Teacher generation requires the separate `instguide-teacher` setup in that same
+file, including Detectron2, PyTorch3D and CropFormer's CUDA attention operator.
+An existing portable teacher can be used without installing these dependencies
+in the 3DGS environment. The references are not a bitwise environment lock;
+verify native operators on the target GPU before a full run.
 
-```bash
-python -m pip install torch-scatter --no-build-isolation
-python -m pip install --no-build-isolation -e submodules/diff-gaussian-rasterization
-python -m pip install --no-build-isolation -e submodules/simple-knn
-```
-
-The first command is a source-build fallback when no matching wheel is available;
-it requires a compatible compiler and CUDA toolkit. Do not reuse compiled
-extensions from a different PyTorch/CUDA environment. On the GPU server, check:
-
-```bash
-export OMP_NUM_THREADS=8
-nvidia-smi
-python - <<'PY'
-import torch, torchvision, torch_scatter, cv2, plyfile, lpips, wandb
-import diff_gaussian_rasterization._C
-from simple_knn._C import distCUDA2
-assert torch.cuda.is_available(), "A GPU allocation and driver are required"
-points = torch.rand(32, 3, device="cuda")
-assert torch.isfinite(distCUDA2(points)).all().item()
-torch.cuda.synchronize()
-print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0))
-PY
-python train.py --help
-```
-
-These checks do not replace a short render/backward/save/reload smoke run.
-
-For teacher generation, also install Detectron2, PyTorch3D, Open3D, and the
-requirements of CropFormer and Alpha-CLIP. These packages are not required when
-training from an already generated teacher.
-
-Semantic text evaluation/visualization needs the same Alpha-CLIP package and
-checkpoint as the teacher, even when teacher generation was done elsewhere.
-After installing the matching PyTorch/torchvision pair, install the inference
-package with `python -m pip install -e third_party/AlphaCLIP-main`. Its metadata
-declares the tokenizer and LoRA dependencies; no model weights are bundled.
-
-Model checkpoints are not redistributed. Put the two teacher-generation weights
-under `third_party/checkpoints/` as documented there.
-
-Use ASCII-only model output paths on Windows; TorchScript export to paths
-containing non-ASCII characters is not supported by the current saving code.
-The shell launchers below require Bash.
+Download weights separately; see [checkpoint names and hashes](third_party/checkpoints/README.md).
+Alpha-CLIP text evaluation also needs the base `ViT-B-16.pt`, not only the visual
+checkpoint. Use the same encoder family as the teacher. The launchers require Bash.
 
 ## Data layout
 
@@ -95,9 +57,11 @@ A scene must provide registered images and a COLMAP sparse model:
 ```text
 SCENE/
   images/
+  depths/                 # registered depth for teacher construction
   sparse/0/cameras.txt
   sparse/0/images.txt
   sparse/0/points3D.ply
+  INSTANCE_MESH.ply        # exact geometry indexed by object_dict.npy
 ```
 
 Training also accepts `cameras.bin` + `images.bin`, using the same binary-first
@@ -115,47 +79,39 @@ For geometry-guided semantic capacity allocation, provide the exact PLY whose
 vertex indices are referenced by the teacher's `object_dict.npy`. Coordinate
 alignment alone is insufficient because `point_ids` are vertex indices.
 
-With `--eval`, registered cameras are sorted and every eighth view is held out.
-Only the remaining views are sampled for optimization.
+With `--eval`, registered camera stems are sorted and indices 0, 8, 16, ... are
+held out. Only training views are sampled for optimization in both 3DGS stages.
+The teacher uses all registered views, making this a transductive scene setup,
+not a teacher built exclusively from training views.
 
 ## 1. Generate the instance teacher
 
-The complete teacher pipeline is in `semantic_3dgs_teacher/`. A self-contained
-12D teacher can be produced with:
+In `instguide-teacher`, from the repository root:
 
 ```bash
+export CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4
 python -m semantic_3dgs_teacher.pipeline \
-  --repo_root "$PWD" \
-  --stages all \
   --seq_name SCENE_ID \
-  --config scannetpp_dslr_small \
-  --dataset scannetpp_dslr \
-  --scannetpp_dslr_root /path/to/data \
-  --compressed_dim 12 \
-  --latent_dtype float16 \
-  --frame_data_mode copy
+  --scannetpp_dslr_root /path/to/data
 ```
 
-`frame_data_mode=copy` is recommended for portability. The compressed directory
-contains `instance_features.npy`, `instance_ids.npy`, `semantic_codec.pth`,
-`object_dict.npy`, frame instance maps, frame weights, and metadata. See
-`semantic_3dgs_teacher/README.md` for stage-specific commands.
+Defaults match the reference command: `scannetpp_dslr_small`, Alpha-CLIP ViT-B/16,
+12D FP16 latents, copied frame maps/weights, semantic batch 32, and codec training
+for 100 epochs with batch 512 and learning rate `7e-4`. Decoded 512D inspection
+copies are disabled. The portable output is:
 
-Default output names include the requested compressed dimension. Existing mask,
-teacher-export and compression stages are skipped after read-only checks; a
-partial teacher/mask output stops with an error rather than being accepted or
-silently overwritten. Use a new output directory, or explicitly use `--force`
-to rebuild. Validation is structural, not proof that an old output was generated
-with identical settings: after changing teacher settings, use a new output or
-rebuild all affected stages. Avoid `--compressed_maps` for the current trainer,
-whose runtime adapter consumes NPY frame arrays (the generator can also emit NPZ).
-Instance clustering still reuses an existing `object_dict.npy` by file presence;
-its provenance is not established by this check. Rebuild clustering after changes
-to its source geometry, masks or configuration.
+```text
+SCENE/output/semantic_3dgs_teacher_12d/scannetpp_dslr_small/
+```
+
+It contains the codec, instance features/IDs, `object_dict.npy`, maps, weights
+and metadata. Existing stages can be reused; use fresh outputs when changing
+inputs or generation settings. The [teacher guide](semantic_3dgs_teacher/README.md)
+documents dataset-specific depth/mesh settings, cache checks and visualization.
 
 ## 2. Train geometry and semantics
 
-One public launcher runs the two optimization stages in sequence:
+In `instguide-gs`, one launcher runs both optimization stages:
 
 ```bash
 export SRC=/path/to/scene
@@ -163,16 +119,25 @@ export GEOM=$SRC/out_geometry_30000
 export MODEL=$SRC/out_instguide_32000
 export TEACHER=/path/to/compressed_teacher
 export INSTANCE_POINT_CLOUD=/path/to/exact_object_dict_indexed_mesh.ply
-export SEMANTIC_DIM=12
-export RESIDUAL_DIM=4
 export CUDA_VISIBLE_DEVICES=0
 export OMP_NUM_THREADS=8
 bash scripts/train.sh
 ```
 
-The example matches the 12D teacher generated above. Teacher, codec, and model
-latent dimensions must agree. Defaults are 12D latents, residual rank 4, gate
-initialization -4, 30k geometry steps, and 2k semantic steps.
+The launcher supplies the method settings; normally only paths and iteration
+counts need changing:
+
+| Setting | Default |
+| --- | --- |
+| Geometry / semantic optimization steps | 30,000 / 2,000 |
+| Semantic dimension / residual rank / gate initialization | 12 / 4 / -4 |
+| Anchor voxel size | 0.003 |
+| Residual allocation | Transition + unknown anchors; sparse storage |
+| Interior initialization / direct 3D supervision | Enabled / enabled |
+
+Teacher, codec and model latent dimensions must agree. Set `SEMANTIC_DIM` only
+for another teacher dimension, and `GEOMETRY_ITERS` / `SEMANTIC_STEPS` for other
+iteration counts.
 
 The semantic stage freezes geometry, uses alpha-rendered 2D distillation,
 allocates sparse child residuals to boundary/unknown anchors, and enables
@@ -203,7 +168,7 @@ is the supported metric implementation:
 - `render.py` and `metrics.py`: RGB reconstruction rendering and metrics.
 - `render_semantic.py` and `visualize_semantic_3dgs_model.py`: semantic renders and
   class overlays.
-- `semantic_3dgs_teacher.visualize_teacher`: teacher inspection.
+- `visualize_instance_teacher_semantic.py`: compressed teacher inspection.
 
 Report split, vocabulary, text encoder checkpoint, GT construction,
 geometry transfer, model-size boundary and timing boundary with results.
@@ -219,17 +184,9 @@ python -m unittest discover -s tests -v
 A full training smoke test additionally requires a CUDA device and extensions
 compiled against the active PyTorch environment.
 
-See [script protocols](scripts/README.md) for launcher options,
-[two-stage training](SEMANTIC_TWO_STAGE.md) for stage configuration, and
-[code layout](docs/CODE_LAYOUT.md) for the main modules.
-
-For a source-only export to a new directory:
-
-```bash
-python tools/prepare_release.py --output .release/InstGuide-GS-source
-```
-
-It excludes local weights, datasets, and build products without deleting them.
+See [script protocols](scripts/README.md), [two-stage training](SEMANTIC_TWO_STAGE.md)
+and [code layout](docs/CODE_LAYOUT.md) for details. `tools/prepare_release.py`
+provides an optional source-only export without deleting local data.
 
 ## Acknowledgements and licenses
 

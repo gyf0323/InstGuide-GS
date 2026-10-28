@@ -41,6 +41,20 @@ class TrainPipelineTest(unittest.TestCase):
         self.assertNotIn("--use_depth_visible_registration", semantic)
         self.assertNotIn("--use_strict_topk_registration", semantic)
 
+    def test_public_defaults_match_reference_semantic_command(self):
+        args = launcher.build_parser().parse_args([
+            "--source", str(self.root / "scene"), "--geometry", str(self.root / "geometry"),
+            "--model", str(self.root / "semantic"), "--teacher", str(self.root / "teacher"),
+            "--instance-point-cloud", str(self.root / "mesh.ply")])
+        self.assertEqual((args.geometry_iterations, args.semantic_steps), (30000, 2000))
+        self.assertEqual((args.semantic_dim, args.residual_dim), (12, 4))
+        self.assertEqual(args.voxel_size, 0.003)
+        semantic = launcher.build_commands(args)[1][-1]
+        self.assertEqual(semantic[semantic.index("--semantic_latent_dim") + 1], "12")
+        self.assertEqual(semantic[semantic.index("--semantic_gate_init") + 1], "-4.0")
+        self.assertIn("--instance_geometry_initialize_interior", semantic)
+        self.assertIn("--instance_geometry_unknown_residual", semantic)
+
     def test_selected_stage_only(self):
         for stage in ("geometry", "semantic"):
             commands = launcher.build_commands(self.args(stage))

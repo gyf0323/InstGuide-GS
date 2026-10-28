@@ -26,15 +26,23 @@ OpenCV, and the dependencies declared by CropFormer and Alpha-CLIP.
 ```bash
 python -m semantic_3dgs_teacher.pipeline \
   --repo_root "$PWD" \
-  --stages all \
   --seq_name SCENE_ID \
-  --config scannetpp_dslr_small \
-  --dataset scannetpp_dslr \
-  --scannetpp_dslr_root /path/to/data \
-  --compressed_dim 12 \
-  --latent_dtype float16 \
-  --frame_data_mode copy
+  --scannetpp_dslr_root /path/to/data
 ```
+
+Defaults are `--stages all`, `--config scannetpp_dslr_small`,
+`--dataset scannetpp_dslr`, `--compressed_dim 12`, `--latent_dtype float16`,
+`--frame_data_mode copy`, semantic batch 32, codec epochs 100, codec batch 512,
+codec evaluation batch 4096 and codec learning rate `7e-4`. Explicit overrides
+remain available. Server setup is in [environment.yml](../environment.yml).
+
+The reader defaults to `mesh_aligned_0.05.ply` and divides stored depth by `1000`
+to obtain meters. For another mesh filename or depth encoding, pass
+`--scannetpp_dslr_mesh_name` and `--scannetpp_dslr_depth_scale`. For example,
+Replica data exported as `uint16` over a 0-10 meter range needs a divisor of
+`6553.5`, not `1000`; confirm the dataset's encoding before changing this value.
+The selected mesh must be the exact indexed instance source, not an arbitrary
+sparse initialization cloud.
 
 Stages can be selected with `--stages masks`, `instances`, `teacher`, or
 `compress`. Use `--force` only when intentionally replacing an existing stage;
@@ -71,7 +79,9 @@ teacher_config.json
 ```
 
 `decoded_instance_features.npy` and `decoded_for_visualization/` are optional
-inspection artifacts and are not used for training.
+inspection artifacts and are not used for training. They are disabled by default;
+request `--write_decoded_features` and/or `--write_decoded_visualization_teacher`
+when needed.
 
 Use `--frame_data_mode copy` for a portable teacher. `reference` writes absolute
 source paths to `summary.json`; those paths must remain valid on the training
@@ -88,16 +98,15 @@ binding.
 ## Visualization
 
 ```bash
-python -m semantic_3dgs_teacher.visualize_teacher \
-  --teacher_dir /path/to/compressed_teacher/decoded_for_visualization \
-  --rgb_dir /path/to/scene/images \
-  --semantic_gt_mesh /path/to/semantic_mesh.ply \
-  --semantic_classes /path/to/classes.txt \
-  --alphaclip_package_path third_party/AlphaCLIP-main \
-  --alphaclip_checkpoint third_party/checkpoints/clip_b16_grit20m_fultune_2xe.pth \
-  --clip_model ViT-B/16 \
-  --device auto
+python visualize_instance_teacher_semantic.py \
+  --source_path /path/to/scene \
+  --teacher_path /path/to/compressed_teacher \
+  --output_path /path/to/new_teacher_visualization \
+  --prompt_path /path/to/classes.txt \
+  --all_prompt_classes \
+  --clip_model "alphaclip:ViT-B/16:$PWD/third_party/checkpoints/clip_b16_grit20m_fultune_2xe.pth:$PWD/third_party/AlphaCLIP-main"
 ```
 
-The decoded visualization directory is only for qualitative inspection. Train
-from its compressed parent directory.
+This tool reads the compressed teacher and its codec directly. The package's
+`semantic_3dgs_teacher.visualize_teacher` entry remains available for an explicitly
+exported decoded directory. Qualitative inspection is not metric evaluation.

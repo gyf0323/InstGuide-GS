@@ -150,6 +150,28 @@ class ReleasePipelineTest(unittest.TestCase):
         self.assertTrue((root / "instance_features.npy").is_file())
         self.assertIn("semantic_3dgs_teacher_16d", str(pipeline.default_compressed_teacher_dir(args)))
 
+    def test_public_defaults_match_reference_teacher_command(self):
+        args = pipeline.build_parser().parse_args([
+            "--seq_name", "scene", "--scannetpp_dslr_root", str(self.root)])
+        expected = {
+            "config": "scannetpp_dslr_small", "dataset": "scannetpp_dslr",
+            "compressed_dim": 12, "latent_dtype": "float16", "frame_data_mode": "copy",
+            "clip_model": "ViT-B/16", "semantic_batch_size": 32,
+            "codec_epochs": 100, "codec_batch_size": 512,
+            "codec_eval_batch_size": 4096, "codec_lr": 7e-4,
+            "write_decoded_features": False, "write_decoded_visualization_teacher": False,
+        }
+        for key, value in expected.items():
+            self.assertEqual(getattr(args, key), value, key)
+        explicit = pipeline.build_parser().parse_args([
+            "--seq_name", "scene", "--scannetpp_dslr_root", str(self.root),
+            "--config", "scannetpp_dslr", "--compressed_dim", "16",
+            "--write_decoded_features", "--write_decoded_visualization_teacher"])
+        self.assertEqual(explicit.config, "scannetpp_dslr")
+        self.assertEqual(explicit.compressed_dim, 16)
+        self.assertTrue(explicit.write_decoded_features)
+        self.assertTrue(explicit.write_decoded_visualization_teacher)
+
     def test_partial_mask_directory_is_not_treated_as_complete(self):
         scene = self.root / "scene"
         for name in ("images", "sparse/0", "output/mask"):

@@ -16,15 +16,14 @@ export TEACHER=/path/to/compressed_teacher
 export INSTANCE_POINT_CLOUD=/path/to/exact_object_dict_indexed_mesh.ply
 export GEOM=$SRC/out_geometry_30000
 export MODEL=$SRC/out_instguide_32000
-export SEMANTIC_DIM=16
-export RESIDUAL_DIM=4
 export CUDA_VISIBLE_DEVICES=0
 export OMP_NUM_THREADS=8
 bash scripts/train.sh
 ```
 
-Match `SEMANTIC_DIM` to the actual teacher and codec. Its launcher default remains
-12; the example explicitly selects 16. Other defaults are 30,000 geometry steps,
+The default teacher, model latent and codec dimension is 12. Set `SEMANTIC_DIM`
+explicitly only for a teacher/codec with another dimension. Other defaults are
+30,000 geometry steps,
 2,000 semantic steps, a 4D residual and a -4 gate initialization. Change
 `GEOMETRY_ITERS` or `SEMANTIC_STEPS` to adjust the iteration counts.
 
