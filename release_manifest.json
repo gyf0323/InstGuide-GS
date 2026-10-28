@@ -1,7 +1,7 @@
 {
   "file_count": 727,
-  "source_bytes": 16029037,
-  "source_mib": 15.29,
+  "source_bytes": 16023886,
+  "source_mib": 15.28,
   "validation": "file selection only; not GPU validation or license clearance",
   "format": "instguide-source-release-v1",
   "files": [
@@ -22,8 +22,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8704,
-      "sha256": "43a04e51f09f2c6f4bf00bb509b0e0c59d34f3b0f89260851b36e26277cfa3f1"
+      "bytes": 3553,
+      "sha256": "f3c1d19643004d20874c86ec93e4a30dae7f416e59dbef6e8dfe4a4861585948"
     },
     {
       "path": "SEMANTIC_TWO_STAGE.md",
